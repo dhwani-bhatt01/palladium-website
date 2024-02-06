@@ -11,6 +11,8 @@ export const ParallaxHeroSection = () => {
 	const [isDiamond100, setIsDiamond100] = useState(false);
 	const [isAtTop, setIsAtTop] = useState(false);
 	const [scrollHandled, setScrollHandled] = useState(false);
+	const [scrollDirection, setScrollDirection] = useState<"up" | "down">("down");
+	const [prevScrollPos, setPrevScrollPos] = useState(0);
 
 	const divRef = useRef<HTMLDivElement | null>(null);
 
@@ -27,6 +29,29 @@ export const ParallaxHeroSection = () => {
 	const lineY = useTransform(scrollYProgress, [0, 1], ["0%", "2%"]);
 	const lineOpacity = useTransform(scrollYProgress, [0.2, 1], [1, 0]);
 	const diamondY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+
+	// let { scrollY } = useViewportScroll();
+
+	useEffect(() => {
+		console.log(scrollDirection, "scrollDirection");
+	}, [scrollDirection]);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const currentScrollPos = window.pageYOffset;
+			if (currentScrollPos > prevScrollPos) {
+				setScrollDirection("down");
+			} else if (currentScrollPos < prevScrollPos) {
+				setScrollDirection("up");
+			}
+			setPrevScrollPos(currentScrollPos);
+		};
+
+		window.addEventListener("scroll", handleScroll);
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, [prevScrollPos]);
 
 	useEffect(() => {
 		const handleScroll = (e: any) => {
@@ -61,6 +86,7 @@ export const ParallaxHeroSection = () => {
 	}, [isAtTop]);
 
 	useEffect(() => {
+		setPrevScrollPos(window.pageYOffset);
 		window.addEventListener("scroll", () => {
 			const isDiamond100Percent = diamondY.get() === "100%";
 			setIsDiamond100(isDiamond100Percent);
@@ -118,65 +144,107 @@ export const ParallaxHeroSection = () => {
 			>
 				{isDiamond100 && (
 					<div className="flex justify-between pt-64 text-center">
-						<motion.div
-							className="w-72"
-							initial={{ opacity: 0 }}
-							whileInView={{ opacity: 1 }}
-							viewport={{ once: false }}
-							transition={{
-								type: "spring",
-								duration: 1,
-								delay: 1,
-							}}
-						>
-							<h2 className="font-semibold text-[24px]">
-								<span className="text-[#F5D64E]">SECURED</span> BY BITCOIN
-							</h2>
-							<p className="font-medium text-[16px]">
-								Palladium protocol is operated upon Botanix - a truly
-								decentralized smart contract platform secured by the most robust
-								blockchain in the world.
-							</p>
-						</motion.div>
-						<motion.div
-							className="w-72 mt-60"
-							initial={{ opacity: 0 }}
-							whileInView={{ opacity: 1 }}
-							transition={{
-								type: "spring",
-								duration: 1,
-								delay: 2,
-							}}
-						>
-							<h2 className="font-semibold text-[24px]">
-								<span className="text-[#F5D64E]">GOVERNANCE-FREE</span> LIKE
-								BITCOIN
-							</h2>
-							<p className="font-medium text-[16px]">
-								Palladium employs an algorithmic monetary policy. There is no
-								governance, DAO, or admin keys to ensure protocol can never be
-								censored or manipulated.
-							</p>
-						</motion.div>
-						<motion.div
-							className="w-72"
-							initial={{ opacity: 0 }}
-							whileInView={{ opacity: 1 }}
-							transition={{
-								type: "spring",
-								duration: 1,
-								delay: 3,
-							}}
-						>
-							<h2 className="font-semibold text-[24px]">
-								<span className="text-[#F5D64E]">SECURED</span> BY BITCOIN
-							</h2>
-							<p className="font-medium text-[16px]">
-								Palladium protocol is operated upon Botanix - a truly
-								decentralized smart contract platform secured by the most robust
-								blockchain in the world.
-							</p>
-						</motion.div>
+						{scrollDirection === "up" ? (
+							<div className="w-72">
+								<h2 className="font-semibold text-[24px]">
+									<span className="text-[#F5D64E]">SECURED</span> BY BITCOIN
+								</h2>
+								<p className="font-medium text-[16px]">
+									Palladium protocol is operated upon Botanix - a truly
+									decentralized smart contract platform secured by the most
+									robust blockchain in the world.
+								</p>
+							</div>
+						) : (
+							<motion.div
+								className="w-72"
+								initial={{ opacity: 0 }}
+								whileInView={{ opacity: 1 }}
+								viewport={{ once: false }}
+								transition={{
+									type: "spring",
+									duration: 1,
+									delay: 1,
+								}}
+							>
+								<h2 className="font-semibold text-[24px]">
+									<span className="text-[#F5D64E]">SECURED</span> BY BITCOIN
+								</h2>
+								<p className="font-medium text-[16px]">
+									Palladium protocol is operated upon Botanix - a truly
+									decentralized smart contract platform secured by the most
+									robust blockchain in the world.
+								</p>
+							</motion.div>
+						)}
+
+						{scrollDirection === "up" ? (
+							<div className="w-72 mt-60">
+								<h2 className="font-semibold text-[24px]">
+									<span className="text-[#F5D64E]">GOVERNANCE-FREE</span> LIKE
+									BITCOIN
+								</h2>
+								<p className="font-medium text-[16px]">
+									Palladium employs an algorithmic monetary policy. There is no
+									governance, DAO, or admin keys to ensure protocol can never be
+									censored or manipulated.
+								</p>
+							</div>
+						) : (
+							<motion.div
+								className="w-72 mt-60"
+								initial={{ opacity: 0 }}
+								whileInView={{ opacity: 1 }}
+								transition={{
+									type: "spring",
+									duration: 1,
+									delay: 2,
+								}}
+							>
+								<h2 className="font-semibold text-[24px]">
+									<span className="text-[#F5D64E]">GOVERNANCE-FREE</span> LIKE
+									BITCOIN
+								</h2>
+								<p className="font-medium text-[16px]">
+									Palladium employs an algorithmic monetary policy. There is no
+									governance, DAO, or admin keys to ensure protocol can never be
+									censored or manipulated.
+								</p>
+							</motion.div>
+						)}
+
+						{scrollDirection === "up" ? (
+							<div className="w-72">
+								<h2 className="font-semibold text-[24px]">
+									<span className="text-[#F5D64E]">SECURED</span> BY BITCOIN
+								</h2>
+								<p className="font-medium text-[16px]">
+									Palladium protocol is operated upon Botanix - a truly
+									decentralized smart contract platform secured by the most
+									robust blockchain in the world.
+								</p>
+							</div>
+						) : (
+							<motion.div
+								className="w-72"
+								initial={{ opacity: 0 }}
+								whileInView={{ opacity: 1 }}
+								transition={{
+									type: "spring",
+									duration: 1,
+									delay: 3,
+								}}
+							>
+								<h2 className="font-semibold text-[24px]">
+									<span className="text-[#F5D64E]">SECURED</span> BY BITCOIN
+								</h2>
+								<p className="font-medium text-[16px]">
+									Palladium protocol is operated upon Botanix - a truly
+									decentralized smart contract platform secured by the most
+									robust blockchain in the world.
+								</p>
+							</motion.div>
+						)}
 					</div>
 				)}
 			</div>
