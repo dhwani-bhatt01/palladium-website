@@ -1,8 +1,11 @@
+"use client";
+
 import IconSectionThree from "@/assets/ab-chal-ja.png";
 import IconSectionOne from "@/assets/icon-section-one.png";
 import IconSectionTwo from "@/assets/icon-section-two.png";
 import { Footer } from "@/components/footer";
 import { HeroSection } from "@/components/hero-section";
+import { ParallaxHeroSection } from "@/components/parallax-hero-section";
 import { Section } from "@/components/section";
 import { UseCaseComponent } from "@/components/use-case-component";
 import { UseCaseMobileComponent } from "@/components/use-case-mobile-component";
@@ -12,6 +15,8 @@ export default function Home() {
 		<main className="m-4 md:max-w-7xl md:mx-auto">
 			{/* Hero Section */}
 			<HeroSection />
+
+			<ParallaxHeroSection />
 
 			{/* Section 1 */}
 			<Section
