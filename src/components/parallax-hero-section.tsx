@@ -10,7 +10,7 @@ import { useEffect, useRef, useState } from "react";
 export const ParallaxHeroSection = () => {
 	const [isDiamond100, setIsDiamond100] = useState(false);
 	const [isAtTop, setIsAtTop] = useState(false);
-	const [scrollHandled, setScrollHandled] = useState(false);
+	// const [scrollHandled, setScrollHandled] = useState(false);
 	const [scrollDirection, setScrollDirection] = useState<"up" | "down">("down");
 	const [prevScrollPos, setPrevScrollPos] = useState(0);
 
@@ -30,12 +30,6 @@ export const ParallaxHeroSection = () => {
 	const lineOpacity = useTransform(scrollYProgress, [0.2, 1], [1, 0]);
 	const diamondY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
-	// let { scrollY } = useViewportScroll();
-
-	useEffect(() => {
-		console.log(scrollDirection, "scrollDirection");
-	}, [scrollDirection]);
-
 	useEffect(() => {
 		const handleScroll = () => {
 			const currentScrollPos = window.pageYOffset;
@@ -53,27 +47,57 @@ export const ParallaxHeroSection = () => {
 		};
 	}, [prevScrollPos]);
 
+	// useEffect(
+	// 	() => {
+	// 		const handleScroll = (e: any) => {
+	// 			// if (!scrollHandled) {
+	// 			const divTop = divRef.current?.getBoundingClientRect().top;
+
+	// 			const isTop = (divTop ?? 0) <= 0;
+	// 			setIsAtTop(isTop);
+
+	// 			if (isTop) {
+	// 				e.preventDefault();
+	// 				// setScrollHandled(true);
+	// 				window.removeEventListener("scroll", handleScroll);
+	// 			}
+	// 		};
+	// 		window.addEventListener("scroll", handleScroll, { passive: false });
+
+	// 		return () => {
+	// 			window.removeEventListener("scroll", handleScroll);
+	// 		};
+	// 	},
+	// 	[
+	// 		// scrollHandled
+	// 	]
+	// );
+
 	useEffect(() => {
 		const handleScroll = (e: any) => {
-			if (!scrollHandled) {
-				const divTop = divRef.current?.getBoundingClientRect().top;
+			const divTop = divRef.current?.getBoundingClientRect().top;
 
-				const isTop = (divTop ?? 0) <= 0;
-				setIsAtTop(isTop);
-
-				if (isTop) {
-					e.preventDefault();
-					setScrollHandled(true);
-					window.removeEventListener("scroll", handleScroll);
-				}
+			// Set a threshold (e.g., 0) for when the div is considered at the top
+			const isTop = (divTop ?? 0) <= 0;
+			setIsAtTop(isTop);
+			if (isTop) {
+				e.preventDefault();
 			}
 		};
-		window.addEventListener("scroll", handleScroll, { passive: false });
 
+		// Attach scroll event listener
+		// window.addEventListener("scroll", handleScroll);
+		if (!isAtTop) {
+			window.addEventListener("scroll", handleScroll, { passive: false });
+		} else {
+			window.removeEventListener("scroll", handleScroll);
+		}
+
+		// Clean up the event listener on component unmount
 		return () => {
 			window.removeEventListener("scroll", handleScroll);
 		};
-	}, [scrollHandled]);
+	}, []);
 
 	useEffect(() => {
 		if (isAtTop) {
