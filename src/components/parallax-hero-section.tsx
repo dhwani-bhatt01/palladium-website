@@ -4,7 +4,12 @@ import Ellipse from "@/assets/ellipse-new.png";
 import DiamondWithGradient from "@/assets/high-shadow-diamond.png";
 import DiamondWithoutGradient from "@/assets/low-shadow-diamond.png";
 import VerticleLine from "@/assets/verticle-line.png";
-import { motion, useScroll, useTransform } from "framer-motion";
+import {
+	AnimatePresence,
+	motion,
+	useScroll,
+	useTransform,
+} from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 export const ParallaxHeroSection = () => {
@@ -105,7 +110,7 @@ export const ParallaxHeroSection = () => {
 			document.body.style.overflowY = "hidden";
 			setTimeout(() => {
 				document.body.style.overflowY = "auto";
-			}, 6000);
+			}, 2000);
 		}
 	}, [isAtTop]);
 
@@ -140,18 +145,68 @@ export const ParallaxHeroSection = () => {
 					style={{ y: lineY, opacity: lineOpacity }}
 					className="absolute translate-y-1/2 bottom-0"
 				/>
-				<motion.img
+				{/* <motion.img
 					src={
 						isDiamond100 ? DiamondWithGradient.src : DiamondWithoutGradient.src
 					}
 					alt="diamond"
 					style={{ y: diamondY }}
 					className="absolute top-36 h-[70vh] -translate-x-1"
-				/>
+				/> */}
+				<AnimatePresence>
+					{isDiamond100 ? (
+						<motion.img
+							key="diamond-with-gradient"
+							src={DiamondWithGradient.src}
+							alt="diamond"
+							style={{ y: diamondY }}
+							className="absolute top-36 h-[70vh] -translate-x-1"
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
+							exit={{ opacity: 0 }}
+							transition={{ duration: 1, delay: 0.6 }}
+						/>
+					) : (
+						<motion.img
+							key="diamond-without-gradient"
+							src={DiamondWithoutGradient.src}
+							alt="diamond"
+							style={{ y: diamondY }}
+							className="absolute top-36 h-[70vh] -translate-x-1"
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
+							exit={{ opacity: 0 }}
+							transition={{ duration: 1, delay: 0.6 }}
+						/>
+					)}
+				</AnimatePresence>
+
+				<motion.h2
+					style={{ y: textY }}
+					className="text-center font-semibold text-[46px] max-w-4xl text-[#F5D64E]"
+					initial={{ opacity: 0 }}
+					whileInView={{ opacity: 1 }}
+					viewport={{ once: false }}
+					transition={{
+						type: "spring",
+						duration: 1,
+						delay: 1,
+					}}
+				>
+					MEET $PUSD
+				</motion.h2>
 
 				<motion.h3
 					style={{ y: textY }}
 					className="text-center font-semibold text-[36px] max-w-4xl"
+					initial={{ opacity: 0 }}
+					whileInView={{ opacity: 1 }}
+					viewport={{ once: false }}
+					transition={{
+						type: "spring",
+						duration: 1,
+						delay: 1.5,
+					}}
 				>
 					$PUSD is a censorship-resistant USD-pegeed cryptocurrency that is
 					backed by{" "}
@@ -188,7 +243,7 @@ export const ParallaxHeroSection = () => {
 								transition={{
 									type: "spring",
 									duration: 1,
-									delay: 1,
+									delay: 0.75,
 								}}
 							>
 								<h2 className="font-semibold text-[24px]">
@@ -222,7 +277,7 @@ export const ParallaxHeroSection = () => {
 								transition={{
 									type: "spring",
 									duration: 1,
-									delay: 2,
+									delay: 1,
 								}}
 							>
 								<h2 className="font-semibold text-[24px]">
@@ -256,7 +311,7 @@ export const ParallaxHeroSection = () => {
 								transition={{
 									type: "spring",
 									duration: 1,
-									delay: 3,
+									delay: 1.5,
 								}}
 							>
 								<h2 className="font-semibold text-[24px]">
