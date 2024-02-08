@@ -1,4 +1,6 @@
+import SpiderIcon from "@/assets/spider-icon.png";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { CroppedBorderContainer } from "./cropped-border-container";
 import { Button } from "./ui/button";
@@ -33,14 +35,21 @@ export const HeroSection = () => {
       </Link>
     </p>
   </div> */}
-			<CroppedBorderContainer>
-				<p className="flex text-lg font-medium items-center">
-					Strategic Partnerships with Mantle Network
-					<Link className="ml-2 text-base text-[#F5D64E] flex" href="#">
-						READ MORE <ArrowRight color="#f5d64e" />
-					</Link>
-				</p>
-			</CroppedBorderContainer>
+			<div className="relative">
+				<CroppedBorderContainer>
+					<p className="flex text-lg font-medium items-center">
+						Strategic Partnerships with Mantle Network
+						<Link className="ml-2 text-base text-[#F5D64E] flex" href="#">
+							READ MORE <ArrowRight color="#f5d64e" />
+						</Link>
+					</p>
+				</CroppedBorderContainer>
+				<Image
+					className="absolute -left-[4.35rem] -bottom-[4.35rem]"
+					src={SpiderIcon}
+					alt="spider-icon"
+				/>
+			</div>
 		</div>
 	);
 };

@@ -19,14 +19,20 @@ export const ParallaxHeroSection = () => {
 	const [scrollDirection, setScrollDirection] = useState<"up" | "down">("down");
 	const [prevScrollPos, setPrevScrollPos] = useState(0);
 
-	const divRef = useRef<HTMLDivElement | null>(null);
+	const divRefOne = useRef(null);
 
-	const ref = useRef(null);
+	const divRefTwo = useRef<HTMLDivElement | null>(null);
+
+	const { scrollY: pageScrollY } = useScroll();
 
 	const { scrollYProgress } = useScroll({
-		target: ref,
+		target: divRefOne,
 		offset: ["start start", "end start"],
 	});
+
+	useEffect(() => {
+		console.log(pageScrollY.get());
+	}, [pageScrollY.get()]);
 
 	const ellipseY = useTransform(scrollYProgress, [0, 1], ["0%", "2%"]);
 	const ellipseOpacity = useTransform(scrollYProgress, [0.5, 1], [1, 0]); // Fading effect from 1 to 0 after 50% scroll
@@ -56,7 +62,7 @@ export const ParallaxHeroSection = () => {
 	// 	() => {
 	// 		const handleScroll = (e: any) => {
 	// 			// if (!scrollHandled) {
-	// 			const divTop = divRef.current?.getBoundingClientRect().top;
+	// 			const divTop = divRefTwo.current?.getBoundingClientRect().top;
 
 	// 			const isTop = (divTop ?? 0) <= 0;
 	// 			setIsAtTop(isTop);
@@ -80,7 +86,7 @@ export const ParallaxHeroSection = () => {
 
 	useEffect(() => {
 		const handleScroll = (e: any) => {
-			const divTop = divRef.current?.getBoundingClientRect().top;
+			const divTop = divRefTwo.current?.getBoundingClientRect().top;
 
 			// Set a threshold (e.g., 0) for when the div is considered at the top
 			const isTop = (divTop ?? 0) <= 0;
@@ -124,9 +130,9 @@ export const ParallaxHeroSection = () => {
 
 	return (
 		<>
-			{/****************** Parallax Section One ******************/}
+			{/****** Parallax Section One ******/}
 			<div
-				ref={ref}
+				ref={divRefOne}
 				className="snap-start relative h-screen flex flex-col items-center justify-center"
 			>
 				<motion.img
@@ -181,16 +187,52 @@ export const ParallaxHeroSection = () => {
 					)}
 				</AnimatePresence>
 
+				{/* <motion.h2
+          style={{ y: textY }}
+          className="text-center font-semibold text-[46px] max-w-4xl text-[#F5D64E]"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: false }}
+          transition={{
+            type: "spring",
+            duration: 1,
+            delay: 1,
+          }}
+        >
+          MEET $PUSD
+        </motion.h2>
+
+        <motion.h3
+          style={{ y: textY }}
+          className="text-center font-semibold text-[36px] max-w-4xl"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: false }}
+          transition={{
+            type: "spring",
+            duration: 1,
+            delay: 1.5,
+          }}
+        >
+          $PUSD is a censorship-resistant USD-pegeed cryptocurrency that is
+          backed by{" "}
+          <span className="text-[#F5D64E]">
+            security & robustness of Bitcoin.
+          </span>
+        </motion.h3> */}
+
 				<motion.h2
 					style={{ y: textY }}
 					className="text-center font-semibold text-[46px] max-w-4xl text-[#F5D64E]"
 					initial={{ opacity: 0 }}
-					whileInView={{ opacity: 1 }}
-					viewport={{ once: false }}
+					animate={{
+						opacity:
+							scrollDirection === "up" ? 1 : pageScrollY.get() >= 600 ? 1 : 0,
+					}}
 					transition={{
 						type: "spring",
-						duration: 1,
-						delay: 1,
+						duration: 0.5,
+						delay: 0,
 					}}
 				>
 					MEET $PUSD
@@ -200,12 +242,14 @@ export const ParallaxHeroSection = () => {
 					style={{ y: textY }}
 					className="text-center font-semibold text-[36px] max-w-4xl"
 					initial={{ opacity: 0 }}
-					whileInView={{ opacity: 1 }}
-					viewport={{ once: false }}
+					animate={{
+						opacity:
+							scrollDirection === "up" ? 1 : pageScrollY.get() >= 650 ? 1 : 0,
+					}}
 					transition={{
 						type: "spring",
-						duration: 1,
-						delay: 1.5,
+						duration: 0.5,
+						delay: 0,
 					}}
 				>
 					$PUSD is a censorship-resistant USD-pegeed cryptocurrency that is
@@ -216,10 +260,10 @@ export const ParallaxHeroSection = () => {
 				</motion.h3>
 			</div>
 
-			{/****************** Parallax Section Two ******************/}
+			{/****** Parallax Section Two ******/}
 			<div
 				className="snap-start min-h-screen w-full px-6 max-w-5xl mx-auto"
-				ref={divRef}
+				ref={divRefTwo}
 			>
 				{isDiamond100 && (
 					<div className="flex justify-between pt-64 text-center">
