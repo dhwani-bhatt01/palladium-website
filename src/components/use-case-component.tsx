@@ -9,6 +9,7 @@ import PreservingWealthBlack from "@/assets/use-case-icons/preserving-wealth-bla
 import PreservingWealthYellow from "@/assets/use-case-icons/preserving-wealth-yellow.png";
 import YieldFarmingBlack from "@/assets/use-case-icons/yield-farming-black.png";
 import YieldFarmingYellow from "@/assets/use-case-icons/yield-farming-yellow.png";
+import UseCaseImgFive from "@/assets/use-case-img-five-with-shadow.png";
 import UseCaseImgFour from "@/assets/use-case-img-four-with-shadow.png";
 import UseCaseImgThree from "@/assets/use-case-img-three-with-shadow.png";
 import UseCaseImgTwo from "@/assets/use-case-img-two-with-shadow.png";
@@ -26,7 +27,7 @@ export const UseCaseComponent = () => {
 				UNRESTRICTED <span className="text-[#F5D64E]">FINANCIAL SERVICES</span>,
 				AVAILABLE TO EVERYONE{" "}
 			</h1>
-			<div className="grid grid-cols-[1fr_2fr] h-[384px] border border-[#F5D64E]">
+			<div className="grid grid-cols-[1fr_2fr] border border-[#F5D64E]">
 				<div className="border border-[#F5D64E]">
 					<UseCaseListItem
 						label="Currency for Network States"
@@ -69,6 +70,17 @@ export const UseCaseComponent = () => {
 						}}
 						isSelected={selectedCase === "yield_farming"}
 						value="yield_farming"
+						onSelect={(key) => setSelectedCase(key)}
+					/>
+
+					<UseCaseListItem
+						label="Crowd Funding"
+						icons={{
+							selected: YieldFarmingBlack,
+							notSelected: YieldFarmingYellow,
+						}}
+						isSelected={selectedCase === "crowd_funding"}
+						value="crowd_funding"
 						onSelect={(key) => setSelectedCase(key)}
 					/>
 				</div>
@@ -153,6 +165,28 @@ export const UseCaseComponent = () => {
 						<div className="h-full bg-[linear-gradient(159deg,_#F5D64E_-215.6%,_rgba(245,_214,_78,_0.00)_55.93%)]">
 							<div className="flex flex-col w-2/3 pt-12 pl-12">
 								<h2 className="text-[32px] font-semibold">Yield Farming</h2>
+								<p className="text-[16px] font-medium">
+									Palladium employs an algorithmic monetary policy. There is no
+									governance, DAO, or admin keys to ensure protocol can never be
+									censored or manipulated.
+								</p>
+							</div>
+						</div>
+					</div>
+				)}
+
+				{/* Crowd Funding */}
+				{selectedCase === "crowd_funding" && (
+					<div
+						className="w-full bg-no-repeat"
+						style={{
+							backgroundImage: `url(${UseCaseImgFive.src})`,
+							backgroundPosition: "right",
+						}}
+					>
+						<div className="h-full bg-[linear-gradient(159deg,_#F5D64E_-215.6%,_rgba(245,_214,_78,_0.00)_55.93%)]">
+							<div className="flex flex-col w-2/3 pt-12 pl-12">
+								<h2 className="text-[32px] font-semibold">Crowd Funding</h2>
 								<p className="text-[16px] font-medium">
 									Palladium employs an algorithmic monetary policy. There is no
 									governance, DAO, or admin keys to ensure protocol can never be

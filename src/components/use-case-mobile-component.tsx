@@ -1,7 +1,7 @@
 import UseCaseImgOne from "@/assets/UseCaseImgOne.png";
-import UseCaseImgFour from "@/assets/use-case-img-four.png";
-import UseCaseImgThree from "@/assets/use-case-img-three.png";
-import UseCaseImgTwo from "@/assets/use-case-img-two.png";
+import UseCaseImgFour from "@/assets/use-case-img-four-with-shadow.png";
+import UseCaseImgThree from "@/assets/use-case-img-three-with-shadow.png";
+import UseCaseImgTwo from "@/assets/use-case-img-two-with-shadow.png";
 import { UseCaseListItemMobile } from "./use-case-list-item-mobile";
 
 export const UseCaseMobileComponent = () => {

@@ -1,7 +1,10 @@
 "use client";
 
+import { BlogsAndMediaSection } from "@/components/blogs-and-media-section";
 import { Footer } from "@/components/footer";
+import { GetStartedSection } from "@/components/get-started-section";
 import { HeroSection } from "@/components/hero-section";
+// import { Notched } from "@/components/notched-card";
 import { ParallaxHeroSection } from "@/components/parallax-hero-section";
 import { PusdExperience } from "@/components/pusd-experience";
 import { UseCaseComponent } from "@/components/use-case-component";
@@ -19,6 +22,20 @@ export default function Home() {
 			<UseCaseMobileComponent />
 
 			<PusdExperience />
+
+			<GetStartedSection />
+
+			<BlogsAndMediaSection />
+			{/* <NotchedCard>
+				{" "}
+				<p className="flex text-lg font-medium items-center">
+					Strategic Partnerships with Mantle Network
+					<Link className="ml-2 text-base text-[#F5D64E] flex" href="#">
+						READ MORE <ArrowRight color="#f5d64e" />
+					</Link>
+				</p>
+			</NotchedCard> */}
+			{/* <Notched /> */}
 			{/* Section 1 */}
 			{/* <Section
 				image={IconSectionOne}
