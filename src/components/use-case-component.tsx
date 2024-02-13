@@ -92,6 +92,7 @@ export const UseCaseComponent = () => {
 						style={{
 							backgroundImage: `url(${UseCaseImgOne.src})`,
 							backgroundPosition: "right",
+							backgroundSize: "contain",
 						}}
 					>
 						<div className="h-full bg-[linear-gradient(159deg,_#F5D64E_-215.6%,_rgba(245,_214,_78,_0.00)_55.93%)]">

@@ -37,7 +37,7 @@
 		#f5d64e -150.6%,
 		rgba(245, 214, 78, 0) 55.93%
 	); */
-	background-image: url("../../assets//blogs-and-media-card-images//card-image-one.png");
+	/* background-image: url("../../assets//blogs-and-media-card-images//card-image-one.png"); */
 	clip-path: polygon(
 		/* 1st dot */ 30px calc(2px),
 		/* 2nd dot */ calc(100% - 2px) 2px,

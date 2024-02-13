@@ -3,11 +3,11 @@ import { Input } from "@/components/ui/input";
 
 export function InputWithButton() {
 	return (
-		<div className="flex w-full max-w-sm items-center space-x-2">
+		<div className="flex w-full max-w-xl items-center my-8">
 			<Input
 				type="email"
 				placeholder="Enter your email address"
-				className="bg-transparent border-0 border-b-2 border-[#F5D64E]"
+				className="flex-grow bg-transparent rounded-none border-0 border-b border-[#F5D64E]"
 			/>
 			<Button type="submit">Subscribe</Button>
 		</div>
