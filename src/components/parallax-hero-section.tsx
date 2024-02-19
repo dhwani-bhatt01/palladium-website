@@ -7,6 +7,7 @@ import VerticleLine from "@/assets/verticle-line.png";
 import {
 	AnimatePresence,
 	motion,
+	useInView,
 	useScroll,
 	useTransform,
 } from "framer-motion";
@@ -21,9 +22,13 @@ export const ParallaxHeroSection = () => {
 
 	const divRefOne = useRef(null);
 
+	const h2Ref = useRef(null);
+
 	const divRefTwo = useRef<HTMLDivElement | null>(null);
 
 	const { scrollY: pageScrollY } = useScroll();
+
+	const isInView = useInView(h2Ref);
 
 	const { scrollYProgress } = useScroll({
 		target: divRefOne,
@@ -31,8 +36,8 @@ export const ParallaxHeroSection = () => {
 	});
 
 	useEffect(() => {
-		console.log(pageScrollY.get());
-	}, [pageScrollY.get()]);
+		console.log(isInView, "isInView");
+	}, [isInView]);
 
 	const ellipseY = useTransform(scrollYProgress, [0, 1], ["0%", "2%"]);
 	const ellipseOpacity = useTransform(scrollYProgress, [0.5, 1], [1, 0]); // Fading effect from 1 to 0 after 50% scroll
@@ -123,7 +128,9 @@ export const ParallaxHeroSection = () => {
 	useEffect(() => {
 		setPrevScrollPos(window.pageYOffset);
 		window.addEventListener("scroll", () => {
+			console.log(diamondY.get(), "diamondY");
 			const isDiamond100Percent = diamondY.get() === "100%";
+			console.log(isDiamond100Percent, "isDiamond100Percent");
 			setIsDiamond100(isDiamond100Percent);
 		});
 	}, []);
@@ -160,7 +167,7 @@ export const ParallaxHeroSection = () => {
 					className="absolute top-36 h-[70vh] -translate-x-1"
 				/> */}
 				<AnimatePresence>
-					{isDiamond100 ? (
+					{!isInView ? (
 						<motion.img
 							key="diamond-with-gradient"
 							src={DiamondWithGradient.src}
@@ -222,6 +229,7 @@ export const ParallaxHeroSection = () => {
         </motion.h3> */}
 
 				<motion.h2
+					ref={h2Ref}
 					style={{ y: textY }}
 					className="text-center font-semibold text-[46px] max-w-4xl text-[#F5D64E]"
 					initial={{ opacity: 0 }}
@@ -232,7 +240,7 @@ export const ParallaxHeroSection = () => {
 					transition={{
 						type: "spring",
 						duration: 0.5,
-						delay: 0,
+						delay: 0.5,
 					}}
 				>
 					MEET $PUSD
@@ -240,7 +248,7 @@ export const ParallaxHeroSection = () => {
 
 				<motion.h3
 					style={{ y: textY }}
-					className="text-center font-semibold text-[36px] max-w-4xl"
+					className="text-center font-semibold text-[36px] max-w-4xl mt-6"
 					initial={{ opacity: 0 }}
 					animate={{
 						opacity:
@@ -249,11 +257,11 @@ export const ParallaxHeroSection = () => {
 					transition={{
 						type: "spring",
 						duration: 0.5,
-						delay: 0,
+						delay: 1,
 					}}
 				>
-					$PUSD is a censorship-resistant USD-pegeed cryptocurrency that is
-					backed by{" "}
+					a censorship-resistant USD-pegeed cryptocurrency that is backed by
+					<br></br> 
 					<span className="text-[#F5D64E]">
 						security & robustness of Bitcoin.
 					</span>
@@ -287,7 +295,7 @@ export const ParallaxHeroSection = () => {
 								transition={{
 									type: "spring",
 									duration: 1,
-									delay: 0.75,
+									delay: 0,
 								}}
 							>
 								<h2 className="font-semibold text-[24px]">
@@ -355,7 +363,7 @@ export const ParallaxHeroSection = () => {
 								transition={{
 									type: "spring",
 									duration: 1,
-									delay: 1.5,
+									delay: 2,
 								}}
 							>
 								<h2 className="font-semibold text-[24px]">

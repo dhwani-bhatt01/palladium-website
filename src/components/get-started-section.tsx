@@ -26,7 +26,7 @@ const item = {
 
 export const GetStartedSection = () => {
 	return (
-		<div className="flex flex-col gap-16 mt-24 py-4 px-6 min-h-screen">
+		<div className="flex flex-col mt-40 gap-16 px-6">
 			<div className="font-semibold text-[42px] text-center">
 				GET STARTED WITH
 				<span className="text-[#F5D64E]"> PALLADIUM PROTOCOL</span>

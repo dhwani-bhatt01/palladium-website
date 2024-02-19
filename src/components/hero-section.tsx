@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { CroppedBorderContainer } from "./cropped-border-container";
-import { Button } from "./ui/button";
+import { FancyButton } from "./fancy-button";
 
 export const HeroSection = () => {
 	return (
@@ -15,16 +15,19 @@ export const HeroSection = () => {
 				<span className="font-bold text-[42px] md:text-[62px] leading-none text-[#F5D64E]">
 					STABLE COIN
 				</span>
-				<p className="max-w-[700px] font-medium text-[18px]">
+				{/* <p className="max-w-[700px] font-medium text-[18px]">
 					$PUSD is a censorship-resistant USD-pegeed cryptocurrency that is
 					backed by security & robustness of Bitcoin.
-				</p>
-				<div className="relative w-50 corners mt-9 p-2">
+				</p> */}
+				{/* <div className="relative w-50 corners mt-9 p-2">
 					<div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-[#F5D64E]"></div>
 					<div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-[#F5D64E]"></div>
 					<div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#F5D64E]"></div>
 					<div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#F5D64E]"></div>
 					<Button className="">GET STARTED</Button>
+				</div> */}
+				<div className="mt-9">
+					<FancyButton>Get Started</FancyButton>
 				</div>
 			</div>
 			{/* <div className="border border-[#F5D64E] p-4 [clip-path:polygon(1rem_0%,_100%_0,_100%_calc(100%_-_1rem),_calc(100%_-_1rem)_100%,_0_100%,_0%_1rem)]">
@@ -38,7 +41,7 @@ export const HeroSection = () => {
 			<div className="relative">
 				<CroppedBorderContainer>
 					<p className="flex text-lg font-medium items-center">
-						Strategic Partnerships with Mantle Network
+						Strategic Partnerships with Botanix Network
 						<Link className="ml-2 text-base text-[#F5D64E] flex" href="#">
 							READ MORE <ArrowRight color="#f5d64e" />
 						</Link>

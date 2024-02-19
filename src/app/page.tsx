@@ -12,7 +12,7 @@ import { UseCaseMobileComponent } from "@/components/use-case-mobile-component";
 
 export default function Home() {
 	return (
-		<main className="m-4 md:max-w-7xl md:mx-auto">
+		<main className="m-2 md:max-w-7xl md:mx-auto">
 			{/* Hero Section */}
 			<HeroSection />
 

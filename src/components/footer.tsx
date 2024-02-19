@@ -9,7 +9,7 @@ import { InputWithButton } from "./email-input";
 
 export const Footer = () => {
 	return (
-		<div className="flex flex-col items-center justify-center min-h-screen gap-4 mt-10">
+		<div className="flex flex-col items-center justify-center min-h-screen gap-4 mt-20">
 			<div className="relative flex items-center justify-center w-full min-h-[50vh]">
 				<Image
 					className="absolute"

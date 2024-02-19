@@ -95,8 +95,8 @@ export const UseCaseComponent = () => {
 							backgroundSize: "contain",
 						}}
 					>
-						<div className="h-full bg-[linear-gradient(159deg,_#F5D64E_-215.6%,_rgba(245,_214,_78,_0.00)_55.93%)]">
-							<div className="w-2/3 pt-12 pl-12">
+						<div className="h-full flex flex-col justify-center bg-[linear-gradient(159deg,_#F5D64E_-215.6%,_rgba(245,_214,_78,_0.00)_55.93%)]">
+							<div className="w-2/3 pl-12">
 								<h2 className="text-[32px] font-semibold">
 									Currency for Network States
 								</h2>
