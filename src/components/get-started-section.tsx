@@ -31,7 +31,7 @@ export const GetStartedSection = () => {
 				GET STARTED WITH
 				<span className="text-[#F5D64E]"> PALLADIUM PROTOCOL</span>
 			</div>
-			<div className="flex gap-10">
+			<div className="flex justify-center gap-10 flex-wrap">
 				<NotchedCard
 					image={BitcoinIcon}
 					desc="Get Interest-Free Liquidity on Bitcoin"

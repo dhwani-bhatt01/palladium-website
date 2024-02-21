@@ -15,7 +15,7 @@
 		/* 6th dot */ 0% 4rem
 	);
 	/* padding: 3rem; */
-	width: 300px;
+	width: 260px;
 	background-color: transparent;
 }
 .container::after,
@@ -56,13 +56,13 @@
 	z-index: -1;
 }
 
-.container:hover::after {
+/* .container:hover::after {
 	clip-path: polygon(
-		/* 1st dot */ 67px calc(4px),
-		/* 2nd dot */ calc(100% - 4px) 4px,
-		/* 3rd dot */ calc(100% - 4px) calc(100% - 67px),
-		/* 4th dot */ calc(100% - 67px) calc(100% - 4px),
-		/* 5th dot */ 4px calc(100% - 4px),
-		/* 6th dot */ 4px 67px
+		67px calc(4px),
+		calc(100% - 4px) 4px,
+		calc(100% - 4px) calc(100% - 67px),
+		calc(100% - 67px) calc(100% - 4px),
+		4px calc(100% - 4px),
+		4px 67px
 	);
-}
+} */

@@ -6,7 +6,7 @@ import { UseCaseListItemMobile } from "./use-case-list-item-mobile";
 
 export const UseCaseMobileComponent = () => {
 	return (
-		<div className="flex flex-col gap-16 md:hidden">
+		<div className="flex flex-col gap-16 md:hidden px-6">
 			<UseCaseListItemMobile
 				image={UseCaseImgOne}
 				headingLabel="Currency for Network States"

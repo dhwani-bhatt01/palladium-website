@@ -8,9 +8,9 @@ import { NetworkCards } from "./network-cards";
 
 export const PusdExperience = () => {
 	return (
-		<div className="flex items-start *:w-1/2 mt-36">
-			<div className="sticky top-72">
-				<h1 className="text-[42px] font-semibold">
+		<div className="flex flex-col items-center gap-4 md:flex-row md:items-start md:*:w-1/2 mt-36">
+			<div className="md:sticky top-72 md:pb-60">
+				<h1 className="text-[42px] text-center font-semibold">
 					A NETWORK OF APPS TO ENHANCE YOUR{" "}
 					<span className="text-[#F5D64E]">PUSD EXPERIENCE</span>
 				</h1>

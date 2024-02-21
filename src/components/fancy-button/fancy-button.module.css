@@ -50,3 +50,16 @@
 	transition: 0.5s ease-in-out;
 	transform: scalex(1);
 }
+
+.disabled .child {
+	cursor: not-allowed; /* Disable pointer events to prevent clicking */ /* Adjust opacity to indicate it's disabled */
+	background: #81712c; /* Optionally change border color */
+}
+
+.coloredBg::after {
+	background: #1b1a10;
+}
+
+.coloredBg::before {
+	background: #19170f;
+}

@@ -1,9 +1,7 @@
 "use client";
 
-import Ellipse from "@/assets/ellipse-new.png";
 import DiamondWithGradient from "@/assets/high-shadow-diamond.png";
 import DiamondWithoutGradient from "@/assets/low-shadow-diamond.png";
-import VerticleLine from "@/assets/verticle-line.png";
 import {
 	AnimatePresence,
 	motion,
@@ -13,7 +11,7 @@ import {
 } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
-export const ParallaxHeroSection = () => {
+export const ParallaxHeroSectionMobile = () => {
 	const [isDiamond100, setIsDiamond100] = useState(false);
 	const [isAtTop, setIsAtTop] = useState(false);
 	// const [scrollHandled, setScrollHandled] = useState(false);
@@ -35,11 +33,7 @@ export const ParallaxHeroSection = () => {
 		offset: ["start start", "end start"],
 	});
 
-	const ellipseY = useTransform(scrollYProgress, [0, 1], ["0%", "2%"]);
-	const ellipseOpacity = useTransform(scrollYProgress, [0.5, 1], [1, 0]); // Fading effect from 1 to 0 after 50% scroll
 	const textY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
-	const lineY = useTransform(scrollYProgress, [0, 1], ["0%", "2%"]);
-	const lineOpacity = useTransform(scrollYProgress, [0.2, 1], [1, 0]);
 	const diamondY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
 	useEffect(() => {
@@ -85,6 +79,7 @@ export const ParallaxHeroSection = () => {
 		};
 	}, []);
 
+	// used to stop scroll when diamond's div has touched the top of viewport
 	// useEffect(() => {
 	// 	if (isAtTop) {
 	// 		console.log("Div touches the top of the viewport");
@@ -112,7 +107,7 @@ export const ParallaxHeroSection = () => {
 				ref={divRefOne}
 				className="snap-start relative h-screen flex flex-col items-center justify-center"
 			>
-				<motion.img
+				{/* <motion.img
 					src={Ellipse.src}
 					alt="ellipse"
 					style={{
@@ -121,13 +116,13 @@ export const ParallaxHeroSection = () => {
 						height: Ellipse.height,
 					}}
 					className="absolute top-12"
-				/>
-				<motion.img
+				/> */}
+				{/* <motion.img
 					src={VerticleLine.src}
 					alt="line"
 					style={{ y: lineY, opacity: lineOpacity }}
 					className="absolute translate-y-1/2 bottom-0"
-				/>
+				/> */}
 				{/* <motion.img
 					src={
 						isDiamond100 ? DiamondWithGradient.src : DiamondWithoutGradient.src
@@ -201,7 +196,7 @@ export const ParallaxHeroSection = () => {
 				<motion.h2
 					ref={h2Ref}
 					style={{ y: textY }}
-					className="text-center font-semibold text-[46px] max-w-4xl text-[#F5D64E]"
+					className="text-center font-semibold text-[40px] max-w-4xl text-[#F5D64E]"
 					initial={{ opacity: 0 }}
 					animate={{
 						opacity:
@@ -210,7 +205,7 @@ export const ParallaxHeroSection = () => {
 					transition={{
 						type: "spring",
 						duration: 0.5,
-						delay: 0.5,
+						delay: 0,
 					}}
 				>
 					MEET $PUSD
@@ -218,7 +213,7 @@ export const ParallaxHeroSection = () => {
 
 				<motion.h3
 					style={{ y: textY }}
-					className="text-center font-semibold text-[36px] max-w-4xl mt-6"
+					className="text-center font-semibold text-[16px] max-w-4xl mt-3"
 					initial={{ opacity: 0 }}
 					animate={{
 						opacity:
@@ -240,11 +235,11 @@ export const ParallaxHeroSection = () => {
 
 			{/****** Parallax Section Two ******/}
 			<div
-				className="snap-start min-h-screen w-full px-6 max-w-5xl mx-auto"
+				className="min-h-screen w-full px-6 max-w-5xl mx-auto mb-16"
 				ref={divRefTwo}
 			>
 				{isDiamond100 && (
-					<div className="flex justify-between pt-64 text-center">
+					<div className="flex flex-col justify-center items-center mt-[485px] text-center">
 						{scrollDirection === "up" ? (
 							<div className="w-72">
 								<h2 className="font-semibold text-[24px]">
@@ -278,9 +273,19 @@ export const ParallaxHeroSection = () => {
 								</p>
 							</motion.div>
 						)}
-
+						<motion.div
+							className="w-[1px] h-16 bg-[#f5d64e] mx-auto"
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1 }}
+							viewport={{ once: false }}
+							transition={{
+								type: "spring",
+								duration: 1,
+								delay: 1,
+							}}
+						/>
 						{scrollDirection === "up" ? (
-							<div className="w-72 mt-60">
+							<div className="w-72">
 								<h2 className="font-semibold text-[24px]">
 									<span className="text-[#F5D64E]">GOVERNANCE-FREE</span> LIKE
 									BITCOIN
@@ -293,7 +298,7 @@ export const ParallaxHeroSection = () => {
 							</div>
 						) : (
 							<motion.div
-								className="w-72 mt-60"
+								className="w-72"
 								initial={{ opacity: 0 }}
 								whileInView={{ opacity: 1 }}
 								transition={{
@@ -313,7 +318,17 @@ export const ParallaxHeroSection = () => {
 								</p>
 							</motion.div>
 						)}
-
+						<motion.div
+							className="w-[1px] h-16 bg-[#f5d64e] mx-auto"
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1 }}
+							viewport={{ once: false }}
+							transition={{
+								type: "spring",
+								duration: 1,
+								delay: 1.5,
+							}}
+						/>
 						{scrollDirection === "up" ? (
 							<div className="w-72">
 								<h2 className="font-semibold text-[24px]">

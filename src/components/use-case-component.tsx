@@ -22,7 +22,7 @@ export const UseCaseComponent = () => {
 	);
 
 	return (
-		<div className="hidden md:flex flex-col justify-center py-4 px-6 min-h-screen">
+		<div className="hidden lg:flex flex-col justify-center py-4 px-6 min-h-screen">
 			<h1 className="text-[36px] text-center font-semibold mb-11">
 				UNRESTRICTED <span className="text-[#F5D64E]">FINANCIAL SERVICES</span>,
 				AVAILABLE TO EVERYONE{" "}
@@ -119,7 +119,7 @@ export const UseCaseComponent = () => {
 							backgroundPosition: "right",
 						}}
 					>
-						<div className="h-full bg-[linear-gradient(159deg,_#F5D64E_-215.6%,_rgba(245,_214,_78,_0.00)_55.93%)]">
+						<div className="h-full flex flex-col justify-center bg-[linear-gradient(159deg,_#F5D64E_-215.6%,_rgba(245,_214,_78,_0.00)_55.93%)]">
 							<div className="flex flex-col w-2/3 pt-12 pl-12">
 								<h2 className="text-[32px] font-semibold">Preserving Wealth</h2>
 								<p className="text-[16px] font-medium">
@@ -141,7 +141,7 @@ export const UseCaseComponent = () => {
 							backgroundPosition: "right",
 						}}
 					>
-						<div className="h-full bg-[linear-gradient(159deg,_#F5D64E_-215.6%,_rgba(245,_214,_78,_0.00)_55.93%)]">
+						<div className="h-full flex flex-col justify-center bg-[linear-gradient(159deg,_#F5D64E_-215.6%,_rgba(245,_214,_78,_0.00)_55.93%)]">
 							<div className="flex flex-col w-2/3 pt-12 pl-12">
 								<h2 className="text-[32px] font-semibold">Margin Trading</h2>
 								<p className="text-[16px] font-medium">
@@ -163,7 +163,7 @@ export const UseCaseComponent = () => {
 							backgroundPosition: "right",
 						}}
 					>
-						<div className="h-full bg-[linear-gradient(159deg,_#F5D64E_-215.6%,_rgba(245,_214,_78,_0.00)_55.93%)]">
+						<div className="h-full flex flex-col justify-center bg-[linear-gradient(159deg,_#F5D64E_-215.6%,_rgba(245,_214,_78,_0.00)_55.93%)]">
 							<div className="flex flex-col w-2/3 pt-12 pl-12">
 								<h2 className="text-[32px] font-semibold">Yield Farming</h2>
 								<p className="text-[16px] font-medium">
@@ -185,7 +185,7 @@ export const UseCaseComponent = () => {
 							backgroundPosition: "right",
 						}}
 					>
-						<div className="h-full bg-[linear-gradient(159deg,_#F5D64E_-215.6%,_rgba(245,_214,_78,_0.00)_55.93%)]">
+						<div className="h-full flex flex-col justify-center bg-[linear-gradient(159deg,_#F5D64E_-215.6%,_rgba(245,_214,_78,_0.00)_55.93%)]">
 							<div className="flex flex-col w-2/3 pt-12 pl-12">
 								<h2 className="text-[32px] font-semibold">Crowd Funding</h2>
 								<p className="text-[16px] font-medium">
