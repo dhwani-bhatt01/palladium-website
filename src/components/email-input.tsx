@@ -7,9 +7,11 @@ export function InputWithButton() {
 			<Input
 				type="email"
 				placeholder="Enter your email address"
-				className="flex-grow bg-transparent rounded-none border-0 border-b border-[#F5D64E]"
+				className="flex-grow bg-transparent rounded-none border-0 border-b border-[#F5D64E] font-Montserrat"
 			/>
-			<Button type="submit">Subscribe</Button>
+			<Button className="tracking-widest" type="submit">
+				Subscribe
+			</Button>
 		</div>
 	);
 }

@@ -3,19 +3,18 @@ import {
 	DialogContent,
 	DialogDescription,
 	DialogHeader,
-	DialogTitle,
 	DialogTrigger,
 } from "@/components/ui/dialog";
 import { PlayCircle } from "lucide-react";
 import { useState } from "react";
 
 type Props = {
-	title: string;
+	// title: string;
 	videoSrc: string;
 };
 
 export const MediaModal = (props: Props) => {
-	const { title, videoSrc } = props;
+	const { videoSrc } = props;
 	const [isModalOpen, setIsModalOpen] = useState(false);
 
 	const toggleModal = () => {
@@ -34,7 +33,7 @@ export const MediaModal = (props: Props) => {
 			</DialogTrigger>
 			<DialogContent className="bg-black">
 				<DialogHeader>
-					<DialogTitle>{title}</DialogTitle>
+					{/* <DialogTitle>{title}</DialogTitle> */}
 					{isModalOpen && (
 						<DialogDescription>
 							<iframe width="100%" height="315px" src={videoSrc} />

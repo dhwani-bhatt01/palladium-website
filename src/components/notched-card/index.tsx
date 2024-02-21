@@ -21,7 +21,7 @@ export const NotchedCard = (props: Props) => {
 			)}
 		>
 			<Image src={image} alt={image.src} className="h-32 w-auto" />
-			<h3 className="text-center">{desc}</h3>
+			<h3 className="text-center font-Montserrat">{desc}</h3>
 			<div>
 				<FancyButton isColoredBackground disabled={comingSoon}>
 					{btnTxt}

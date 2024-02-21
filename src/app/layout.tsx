@@ -1,5 +1,4 @@
 import glowPng from "@/assets/glow-bg/glow-bg.png";
-import { Navbar } from "@/components/navbar";
 import { cn } from "@/lib/utils";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -69,7 +68,6 @@ export default function RootLayout({
 					"h-screen overflow-y-auto overflow-x-hidden relative bg-[radial-gradient(#5E5222_1.5px,_transparent_1.5px)] [background-size:30px_30px] bg-[#0A0A0A] bg-fixed"
 				)}
 			>
-				<Navbar />
 				<img
 					alt="Glow Background"
 					src={glowPng.src}

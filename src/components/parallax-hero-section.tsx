@@ -8,7 +8,6 @@ import VerticleLine from "@/assets/verticle-line.png";
 import {
 	AnimatePresence,
 	motion,
-	useInView,
 	useScroll,
 	useTransform,
 } from "framer-motion";
@@ -23,13 +22,13 @@ export const ParallaxHeroSection = () => {
 
 	const divRefOne = useRef(null);
 
-	const h2Ref = useRef(null);
+	// const h2Ref = useRef(null);
 
 	const divRefTwo = useRef<HTMLDivElement | null>(null);
 
 	const { scrollY: pageScrollY } = useScroll();
 
-	const isInView = useInView(h2Ref);
+	// const isInView = useInView(h2Ref);
 
 	const { scrollYProgress } = useScroll({
 		target: divRefOne,
@@ -86,15 +85,15 @@ export const ParallaxHeroSection = () => {
 		};
 	}, []);
 
-	// useEffect(() => {
-	// 	if (isAtTop) {
-	// 		console.log("Div touches the top of the viewport");
-	// 		document.body.style.overflowY = "hidden";
-	// 		setTimeout(() => {
-	// 			document.body.style.overflowY = "auto";
-	// 		}, 2000);
-	// 	}
-	// }, [isAtTop]);
+	useEffect(() => {
+		if (isAtTop) {
+			console.log("Div touches the top of the viewport");
+			document.body.style.overflowY = "hidden";
+			setTimeout(() => {
+				document.body.style.overflowY = "auto";
+			}, 2000);
+		}
+	}, [isAtTop]);
 
 	useEffect(() => {
 		setPrevScrollPos(window.pageYOffset);
@@ -138,7 +137,7 @@ export const ParallaxHeroSection = () => {
 					className="absolute top-36 h-[70vh] -translate-x-1"
 				/> */}
 				<AnimatePresence>
-					{!isInView ? (
+					{isDiamond100 ? (
 						<motion.img
 							key="diamond-with-gradient"
 							src={DiamondWithGradient.src}
@@ -165,42 +164,42 @@ export const ParallaxHeroSection = () => {
 					)}
 				</AnimatePresence>
 
-				{/* <motion.h2
-          style={{ y: textY }}
-          className="text-center font-semibold text-[46px] max-w-4xl text-[#F5D64E]"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: false }}
-          transition={{
-            type: "spring",
-            duration: 1,
-            delay: 1,
-          }}
-        >
-          MEET $PUSD
-        </motion.h2>
-
-        <motion.h3
-          style={{ y: textY }}
-          className="text-center font-semibold text-[36px] max-w-4xl"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: false }}
-          transition={{
-            type: "spring",
-            duration: 1,
-            delay: 1.5,
-          }}
-        >
-          $PUSD is a censorship-resistant USD-pegeed cryptocurrency that is
-          backed by{" "}
-          <span className="text-[#F5D64E]">
-            security & robustness of Bitcoin.
-          </span>
-        </motion.h3> */}
-
 				<motion.h2
-					ref={h2Ref}
+					style={{ y: textY }}
+					className="text-center font-semibold text-[46px] max-w-4xl text-[#F5D64E]"
+					initial={{ opacity: 0 }}
+					whileInView={{ opacity: 1 }}
+					viewport={{ once: false }}
+					transition={{
+						type: "spring",
+						duration: 1,
+						delay: 1,
+					}}
+				>
+					MEET $PUSD
+				</motion.h2>
+
+				<motion.h3
+					style={{ y: textY }}
+					className="text-center font-semibold text-[36px] max-w-4xl"
+					initial={{ opacity: 0 }}
+					whileInView={{ opacity: 1 }}
+					viewport={{ once: false }}
+					transition={{
+						type: "spring",
+						duration: 1,
+						delay: 1.5,
+					}}
+				>
+					$PUSD is a censorship-resistant USD-pegeed cryptocurrency that is
+					backed by{" "}
+					<span className="text-[#F5D64E]">
+						security & robustness of Bitcoin.
+					</span>
+				</motion.h3>
+
+				{/* <motion.h2
+					// ref={h2Ref}
 					style={{ y: textY }}
 					className="text-center font-semibold text-[46px] max-w-4xl text-[#F5D64E]"
 					initial={{ opacity: 0 }}
@@ -236,7 +235,7 @@ export const ParallaxHeroSection = () => {
 					<span className="text-[#F5D64E]">
 						security & robustness of Bitcoin.
 					</span>
-				</motion.h3>
+				</motion.h3> */}
 			</div>
 
 			{/****** Parallax Section Two ******/}
@@ -251,7 +250,7 @@ export const ParallaxHeroSection = () => {
 								<h2 className="font-semibold text-[24px]">
 									<span className="text-[#F5D64E]">SECURED</span> BY BITCOIN
 								</h2>
-								<p className="font-medium text-[16px]">
+								<p className="font-medium text-[16px] font-Montserrat">
 									Palladium protocol is operated upon Botanix - a truly
 									decentralized smart contract platform secured by the most
 									robust blockchain in the world.
@@ -272,7 +271,7 @@ export const ParallaxHeroSection = () => {
 								<h2 className="font-semibold text-[24px]">
 									<span className="text-[#F5D64E]">SECURED</span> BY BITCOIN
 								</h2>
-								<p className="font-medium text-[16px]">
+								<p className="font-medium text-[16px] font-Montserrat">
 									Palladium protocol is operated upon Botanix - a truly
 									decentralized smart contract platform secured by the most
 									robust blockchain in the world.
@@ -286,7 +285,7 @@ export const ParallaxHeroSection = () => {
 									<span className="text-[#F5D64E]">GOVERNANCE-FREE</span> LIKE
 									BITCOIN
 								</h2>
-								<p className="font-medium text-[16px]">
+								<p className="font-medium text-[16px] font-Montserrat">
 									Palladium employs an algorithmic monetary policy. There is no
 									governance, DAO, or admin keys to ensure protocol can never be
 									censored or manipulated.
@@ -307,7 +306,7 @@ export const ParallaxHeroSection = () => {
 									<span className="text-[#F5D64E]">GOVERNANCE-FREE</span> LIKE
 									BITCOIN
 								</h2>
-								<p className="font-medium text-[16px]">
+								<p className="font-medium text-[16px] font-Montserrat">
 									Palladium employs an algorithmic monetary policy. There is no
 									governance, DAO, or admin keys to ensure protocol can never be
 									censored or manipulated.

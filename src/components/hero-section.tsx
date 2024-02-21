@@ -7,7 +7,7 @@ import { FancyButton } from "./fancy-button";
 
 export const HeroSection = () => {
 	return (
-		<div className="flex flex-col items-center justify-center text-center min-h-screen gap-24">
+		<div className="flex flex-col items-center justify-center text-center h-[650px] gap-24">
 			<div className="flex flex-col items-center gap-2">
 				<span className="font-bold text-[42px] md:text-[62px] leading-none">
 					WORLD&apos;S MOST RELIABLE
@@ -40,8 +40,8 @@ export const HeroSection = () => {
   </div> */}
 			<div className="relative">
 				<CroppedBorderContainer>
-					<p className="flex text-lg font-medium items-center">
-						Strategic Partnerships with Botanix Network
+					<p className="flex text-lg font-medium items-center font-Montserrat">
+						Strategic partnerships with Botanix Network
 						<Link className="ml-2 text-base text-[#F5D64E] flex" href="#">
 							READ MORE <ArrowRight color="#f5d64e" />
 						</Link>

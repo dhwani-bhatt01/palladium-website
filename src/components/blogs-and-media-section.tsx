@@ -56,14 +56,16 @@ export const BlogsAndMediaSection = () => {
 
 	return (
 		<div className="mt-40 py-4 px-6 max-h-full">
-			<h1 className="font-semibold text-[42px] text-center">BLOGS AND MEDIA</h1>
-			<div className="grid gap-10 justify-center md:grid-cols-3 md:grid-rows-2 mt-5">
+			<h1 className="font-semibold text-[42px] text-center md:text-left mb-10">
+				BLOGS AND MEDIA
+			</h1>
+			<div className="grid gap-16 justify-center md:grid-cols-3 md:grid-rows-2 mt-5">
 				{blogsAndMediaData.map((item) => {
 					return (
 						<BlogsAndMediaRectangleCard
 							key={item.id}
 							image={item.image}
-							description={item.description}
+							// description={item.descripts̄ion}
 							videoLink={item.videoLink}
 						/>
 					);

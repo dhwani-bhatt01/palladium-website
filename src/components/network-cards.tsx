@@ -24,7 +24,7 @@ export const NetworkCards = (props: Props) => {
 		>
 			<div>
 				<Image src={image} alt="MetaMaskIcon" />
-				<p className="mt-2">{description}</p>
+				<p className="mt-2 font-Montserrat">{description}</p>
 			</div>
 
 			{/* info */}

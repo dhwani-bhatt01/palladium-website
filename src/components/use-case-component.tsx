@@ -100,7 +100,7 @@ export const UseCaseComponent = () => {
 								<h2 className="text-[32px] font-semibold">
 									Currency for Network States
 								</h2>
-								<p className="text-[16px] font-medium">
+								<p className="text-[16px] font-medium font-Montserrat">
 									Palladium employs an algorithmic monetary policy. There is no
 									governance, DAO, or admin keys to ensure protocol can never be
 									censored or manipulated.
@@ -120,9 +120,9 @@ export const UseCaseComponent = () => {
 						}}
 					>
 						<div className="h-full flex flex-col justify-center bg-[linear-gradient(159deg,_#F5D64E_-215.6%,_rgba(245,_214,_78,_0.00)_55.93%)]">
-							<div className="flex flex-col w-2/3 pt-12 pl-12">
+							<div className="flex flex-col w-2/3 pl-12">
 								<h2 className="text-[32px] font-semibold">Preserving Wealth</h2>
-								<p className="text-[16px] font-medium">
+								<p className="text-[16px] font-medium font-Montserrat">
 									Palladium employs an algorithmic monetary policy. There is no
 									governance, DAO, or admin keys to ensure protocol can never be
 									censored or manipulated.
@@ -142,9 +142,9 @@ export const UseCaseComponent = () => {
 						}}
 					>
 						<div className="h-full flex flex-col justify-center bg-[linear-gradient(159deg,_#F5D64E_-215.6%,_rgba(245,_214,_78,_0.00)_55.93%)]">
-							<div className="flex flex-col w-2/3 pt-12 pl-12">
+							<div className="flex flex-col w-2/3 pl-12">
 								<h2 className="text-[32px] font-semibold">Margin Trading</h2>
-								<p className="text-[16px] font-medium">
+								<p className="text-[16px] font-medium font-Montserrat">
 									Palladium employs an algorithmic monetary policy. There is no
 									governance, DAO, or admin keys to ensure protocol can never be
 									censored or manipulated.
@@ -164,9 +164,9 @@ export const UseCaseComponent = () => {
 						}}
 					>
 						<div className="h-full flex flex-col justify-center bg-[linear-gradient(159deg,_#F5D64E_-215.6%,_rgba(245,_214,_78,_0.00)_55.93%)]">
-							<div className="flex flex-col w-2/3 pt-12 pl-12">
+							<div className="flex flex-col w-2/3 pl-12">
 								<h2 className="text-[32px] font-semibold">Yield Farming</h2>
-								<p className="text-[16px] font-medium">
+								<p className="text-[16px] font-medium font-Montserrat">
 									Palladium employs an algorithmic monetary policy. There is no
 									governance, DAO, or admin keys to ensure protocol can never be
 									censored or manipulated.
@@ -186,9 +186,9 @@ export const UseCaseComponent = () => {
 						}}
 					>
 						<div className="h-full flex flex-col justify-center bg-[linear-gradient(159deg,_#F5D64E_-215.6%,_rgba(245,_214,_78,_0.00)_55.93%)]">
-							<div className="flex flex-col w-2/3 pt-12 pl-12">
+							<div className="flex flex-col w-2/3 pl-12">
 								<h2 className="text-[32px] font-semibold">Crowd Funding</h2>
-								<p className="text-[16px] font-medium">
+								<p className="text-[16px] font-medium font-Montserrat">
 									Palladium employs an algorithmic monetary policy. There is no
 									governance, DAO, or admin keys to ensure protocol can never be
 									censored or manipulated.
