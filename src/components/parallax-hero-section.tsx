@@ -1,7 +1,8 @@
 "use client";
 
 import Ellipse from "@/assets/ellipse-new.png";
-import DiamondWithGradient from "@/assets/high-shadow-diamond.png";
+// import DiamondWithGradient from "@/assets/high-shadow-diamond.png";
+import DiamondWithGradient from "@/assets/Palladium Images/bitcoin triangle (1).webp";
 import DiamondWithoutGradient from "@/assets/low-shadow-diamond.png";
 import VerticleLine from "@/assets/verticle-line.png";
 import {

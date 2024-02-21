@@ -1,6 +1,6 @@
 "use client";
 
-import DiamondWithGradient from "@/assets/high-shadow-diamond.png";
+import DiamondWithGradient from "@/assets/Palladium Images/bitcoin triangle (1).webp";
 import DiamondWithoutGradient from "@/assets/low-shadow-diamond.png";
 import {
 	AnimatePresence,
