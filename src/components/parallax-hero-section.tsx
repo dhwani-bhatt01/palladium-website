@@ -2,8 +2,9 @@
 
 import Ellipse from "@/assets/ellipse-new.png";
 // import DiamondWithGradient from "@/assets/high-shadow-diamond.png";
-import DiamondWithGradient from "@/assets/Palladium Images/bitcoin triangle (1).webp";
-import DiamondWithoutGradient from "@/assets/low-shadow-diamond.png";
+import DiamondFrameOne from "@/assets/diamond-frames/diamond-frame-one.png";
+import DiamondFrameThree from "@/assets/diamond-frames/diamond-frame-three.png";
+import DiamondFrameTwo from "@/assets/diamond-frames/diamond-frame-two.png";
 import VerticleLine from "@/assets/verticle-line.png";
 import {
 	AnimatePresence,
@@ -15,6 +16,7 @@ import { useEffect, useRef, useState } from "react";
 
 export const ParallaxHeroSection = () => {
 	const [isDiamond100, setIsDiamond100] = useState(false);
+	const [isDivTwo70, setIsDivTwo70] = useState(false);
 	const [isAtTop, setIsAtTop] = useState(false);
 	// const [scrollHandled, setScrollHandled] = useState(false);
 	const [scrollDirection, setScrollDirection] = useState<"up" | "down">("down");
@@ -105,6 +107,35 @@ export const ParallaxHeroSection = () => {
 		});
 	}, []);
 
+	useEffect(() => {
+		const handleScroll = () => {
+			if (!divRefTwo.current) return;
+
+			const divTop = divRefTwo.current.getBoundingClientRect().top;
+			const divBottom = divRefTwo.current.getBoundingClientRect().bottom;
+			const viewportHeight = window.innerHeight;
+
+			// Calculate the height of the div and whether it's visible
+			const divHeight = divBottom - divTop;
+			const visiblePart =
+				Math.min(divBottom, viewportHeight) - Math.max(divTop, 0);
+			const isDivVisible = visiblePart >= divHeight * 0.4;
+
+			setIsDivTwo70(isDivVisible);
+
+			// setIsVisible(isDivVisible);
+			console.log(visiblePart, isDivVisible, "blue div");
+		};
+
+		// Listen for scroll events
+		window.addEventListener("scroll", handleScroll);
+		handleScroll(); // Call initially to check visibility on mount
+
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, []);
+
 	return (
 		<>
 			{/****** Parallax Section One ******/}
@@ -140,27 +171,43 @@ export const ParallaxHeroSection = () => {
 					{isDiamond100 ? (
 						<motion.img
 							key="diamond-with-gradient"
-							src={DiamondWithGradient.src}
+							src={DiamondFrameThree.src}
 							alt="diamond"
 							style={{ y: diamondY }}
 							className="absolute top-36 h-[70vh] -translate-x-1"
 							initial={{ opacity: 0 }}
 							animate={{ opacity: 1 }}
 							exit={{ opacity: 0 }}
-							transition={{ duration: 1, delay: 0.6 }}
+							transition={{ duration: 0.5, delay: 0 }}
 						/>
 					) : (
-						<motion.img
-							key="diamond-without-gradient"
-							src={DiamondWithoutGradient.src}
-							alt="diamond"
-							style={{ y: diamondY }}
-							className="absolute top-36 h-[70vh] -translate-x-1"
-							initial={{ opacity: 0 }}
-							animate={{ opacity: 1 }}
-							exit={{ opacity: 0 }}
-							transition={{ duration: 1, delay: 0.6 }}
-						/>
+						<>
+							{isDivTwo70 ? (
+								<motion.img
+									key="diamond-without-gradient"
+									src={DiamondFrameTwo.src}
+									alt="diamond"
+									style={{ y: diamondY }}
+									className="absolute top-36 h-[70vh] -translate-x-1"
+									initial={{ opacity: 0 }}
+									animate={{ opacity: 1 }}
+									exit={{ opacity: 0 }}
+									transition={{ duration: 0.5, delay: 0 }}
+								/>
+							) : (
+								<motion.img
+									key="diamond-without-gradient"
+									src={DiamondFrameOne.src}
+									alt="diamond"
+									style={{ y: diamondY }}
+									className="absolute top-36 h-[70vh] -translate-x-1"
+									initial={{ opacity: 0 }}
+									animate={{ opacity: 1 }}
+									exit={{ opacity: 0 }}
+									transition={{ duration: 0.5, delay: 0 }}
+								/>
+							)}
+						</>
 					)}
 				</AnimatePresence>
 
