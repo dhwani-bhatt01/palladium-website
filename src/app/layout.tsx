@@ -1,9 +1,24 @@
 import glowPng from "@/assets/glow-bg/glow-bg.png";
 import { cn } from "@/lib/utils";
+import { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
 // const inter = Inter({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+	title: "Palladium Labs | World’s Most Reliable Stablecoin",
+	description:
+		"A censorship-resistant USD/pegged cryptocurrency backed by the robustness of Bitcoin.",
+	// icons: [
+	// 	{
+	// 		rel: "icon",
+	// 		type: "image/webp",
+	// 		url: "/favicon.webp",
+	// 		sizes: "32x32",
+	// 	},
+	// ],
+};
 
 const montech = localFont({
 	src: [
@@ -62,6 +77,10 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
+			<head>
+				<link rel="icon" href="/favicon.webp" />
+			</head>
+
 			<body
 				className={cn(
 					montech.className,

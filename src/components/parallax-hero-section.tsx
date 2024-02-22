@@ -293,7 +293,7 @@ export const ParallaxHeroSection = () => {
 
 			{/****** Parallax Section Two ******/}
 			<div
-				className="snap-start min-h-screen w-full px-6 max-w-5xl mx-auto"
+				className="snap-start min-h-screen w-full px-6 max-w-6xl mx-auto"
 				ref={divRefTwo}
 			>
 				{isDiamond100 && (
@@ -344,7 +344,7 @@ export const ParallaxHeroSection = () => {
 						)}
 
 						{scrollDirection === "up" ? (
-							<div className="w-72 mt-60">
+							<div className="w-72 mt-72">
 								<h2 className="font-semibold text-[24px]">
 									<span className="text-[#F5D64E]">Over-Collateralized </span>{" "}
 									with Bitcoin
@@ -357,13 +357,13 @@ export const ParallaxHeroSection = () => {
 							</div>
 						) : (
 							<motion.div
-								className="w-72 mt-60"
+								className="w-72 mt-72"
 								initial={{ opacity: 0 }}
 								whileInView={{ opacity: 1 }}
 								transition={{
 									type: "spring",
 									duration: 1,
-									delay: 2,
+									delay: 1,
 								}}
 							>
 								<h2 className="font-semibold text-[24px]">
@@ -398,7 +398,7 @@ export const ParallaxHeroSection = () => {
 								transition={{
 									type: "spring",
 									duration: 1,
-									delay: 1,
+									delay: 2,
 								}}
 							>
 								<h2 className="font-semibold text-[24px]">

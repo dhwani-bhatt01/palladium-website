@@ -41,7 +41,7 @@ export const HeroSection = () => {
 			<div className="relative">
 				<CroppedBorderContainer>
 					<p className="flex gap-2 text-lg items-center font-medium font-Montserrat">
-						Strategic partnerships with Botanix Labs
+						Strategic partnership with Botanix Labs
 						<Link
 							className="ml-2 text-[14px] items-center text-[#F5D64E] flex gap-1"
 							href="#"

@@ -1,7 +1,8 @@
 import DiscordIcon from "@/assets/discord-icon.png";
 import DocsIcon from "@/assets/docs-icon.png";
 // import FooterPalladiumIconWithShadow from "@/assets/footer-icons/footer-palladium-icon-with-shadow.png";
-import FooterPalladiumIconWithShadow from "@/assets/footer-icons/footer-icon-new.png";
+// import FooterPalladiumIconWithShadow from "@/assets/footer-icons/footer-icon-new.png";
+import FooterPalladiumIconWithShadow from "@/assets/footer-icons/Opacity-logo-with-text.webp";
 import MediumIcon from "@/assets/medium-icon.png";
 import TwitterIcon from "@/assets/twitter-icon.png";
 import Image from "next/image";
@@ -17,14 +18,14 @@ export const Footer = () => {
 					src={FooterPalladiumIconWithShadow}
 					alt="footer-palladium-icon"
 				/>
-				<div className="flex flex-col text-center leading-none">
+				{/* <div className="flex flex-col text-center leading-none">
 					<span className="text-[54px] font-bold text-[#F5D64E] md:text-[99px] md:font-bold">
 						PALLADIUM
 					</span>
 					<span className="text-[32px] font-bold md:text-[59px] md:font-bold md:tracking-widest">
 						PROTOCOL
 					</span>
-				</div>
+				</div> */}
 			</div>
 			<InputWithButton />
 			{/* <span className="text-[21px] font-semibold">JOIN THE COMMUNITY</span> */}
