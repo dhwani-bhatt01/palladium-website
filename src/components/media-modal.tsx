@@ -5,36 +5,38 @@ import {
 	DialogHeader,
 	DialogTrigger,
 } from "@/components/ui/dialog";
-import { PlayCircle } from "lucide-react";
-import { useState } from "react";
 
 type Props = {
 	// title: string;
 	videoSrc: string;
+	isOpen: boolean;
+	onClose: () => void;
 };
 
 export const MediaModal = (props: Props) => {
-	const { videoSrc } = props;
-	const [isModalOpen, setIsModalOpen] = useState(false);
-
-	const toggleModal = () => {
-		setIsModalOpen(!isModalOpen);
-	};
+	const { videoSrc, isOpen, onClose } = props;
 
 	return (
-		<Dialog>
+		<Dialog
+			open={isOpen}
+			onOpenChange={(newOpen) => {
+				if (!newOpen) {
+					onClose();
+				}
+			}}
+		>
 			<DialogTrigger>
-				<PlayCircle
+				{/* <PlayCircle
 					color="#F5D64E"
 					strokeWidth={1.75}
 					size={40}
 					onClick={toggleModal}
-				/>
+				/> */}
 			</DialogTrigger>
 			<DialogContent className="bg-black">
 				<DialogHeader>
 					{/* <DialogTitle>{title}</DialogTitle> */}
-					{isModalOpen && (
+					{isOpen && (
 						<DialogDescription>
 							<iframe width="100%" height="315px" src={videoSrc} />
 						</DialogDescription>

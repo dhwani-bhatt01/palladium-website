@@ -1,15 +1,21 @@
-import CardImgFive from "@/assets/blogs-and-media-card-images/card-image-five.png";
-import CardImgFour from "@/assets/blogs-and-media-card-images/card-image-four.png";
-import CardImgOne from "@/assets/blogs-and-media-card-images/card-image-one.png";
-import CardImgSix from "@/assets/blogs-and-media-card-images/card-image-six.png";
-import CardImgThree from "@/assets/blogs-and-media-card-images/card-image-three.png";
-import CardImgTwo from "@/assets/blogs-and-media-card-images/card-image-two.png";
+// import CardImgFive from "@/assets/blogs-and-media-card-images/card-image-five.png";
+// import CardImgFour from "@/assets/blogs-and-media-card-images/card-image-four.png";
+// import CardImgOne from "@/assets/blogs-and-media-card-images/card-image-one.png";
+// import CardImgSix from "@/assets/blogs-and-media-card-images/card-image-six.png";
+// import CardImgThree from "@/assets/blogs-and-media-card-images/card-image-three.png";
+// import CardImgTwo from "@/assets/blogs-and-media-card-images/card-image-two.png";
+import CardImgSix from "@/assets/Thumbnails/botanix-labs.webp";
+import CardImgFour from "@/assets/Thumbnails/launching-palladium-protocol.webp";
+import CardImgFive from "@/assets/Thumbnails/palladium-protocol.webp";
+import CardImgTwo from "@/assets/Thumbnails/stablecoin.webp";
+import CardImgThree from "@/assets/Thumbnails/trust-trustless-system.webp";
+import CardImgOne from "@/assets/Thumbnails/what-is-pusd.webp";
 import { StaticImageData } from "next/image";
 import { BlogsAndMediaRectangleCard } from "./blogs-and-media-rectangle-card";
 
 type BlogAndMediaCardPayload = {
 	image: StaticImageData;
-	description: string;
+	// description: string;
 	id: number;
 	videoLink?: string;
 };
@@ -19,38 +25,38 @@ export const BlogsAndMediaSection = () => {
 		{
 			id: 1,
 			image: CardImgOne,
-			description: "Introducing Pseudo-Delta-Neutral by Rivera Quant",
+			// description: "Introducing Pseudo-Delta-Neutral by Rivera Quant",
+			videoLink:
+				"https://www.youtube.com/embed/wCYUPY9iESM?si=rkxyUXG6AEVsXyM6",
 		},
 		{
 			id: 2,
 			image: CardImgTwo,
-			description: "⚓️Titans of Rivera⚓️ Exclusive 100 NFTs for the Top OGs.",
-		},
-		{
-			id: 3,
-			image: CardImgThree,
-			description: "Rivera — Liquidity Infrastructure for Mantle 🔥",
-		},
-		{
-			id: 4,
-			image: CardImgFour,
-			description: "How to trust a trustless system?",
-			videoLink:
-				"https://www.youtube.com/embed/wCYUPY9iESM?si=6ZqFECxkZpIO1H0F",
-		},
-		{
-			id: 5,
-			image: CardImgFive,
-			description: "Evolution of Blockchain in India:The value of Ownership",
+			// description: "⚓️Titans of Rivera⚓️ Exclusive 100 NFTs for the Top OGs.",
 			videoLink:
 				"https://www.youtube.com/embed/BtTJmb0jYzE?si=vjt2RtGGxWgU4PqO",
 		},
 		{
+			id: 3,
+			image: CardImgThree,
+			// description: "Rivera — Liquidity Infrastructure for Mantle 🔥",
+			videoLink:
+				"https://www.youtube.com/embed/wCYUPY9iESM?si=6ZqFECxkZpIO1H0F",
+		},
+		{
+			id: 4,
+			image: CardImgFour,
+			// description: "How to trust a trustless system?",
+		},
+		{
+			id: 5,
+			image: CardImgFive,
+			// description: "Evolution of Blockchain in India:The value of Ownership",
+		},
+		{
 			id: 6,
 			image: CardImgSix,
-			description: "How to trust a trustless system?",
-			videoLink:
-				"https://www.youtube.com/embed/wCYUPY9iESM?si=rkxyUXG6AEVsXyM6",
+			// description: "How to trust a trustless system?",
 		},
 	];
 
