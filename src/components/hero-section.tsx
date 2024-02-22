@@ -13,7 +13,7 @@ export const HeroSection = () => {
 					WORLD&apos;S MOST RELIABLE
 				</span>
 				<span className="font-bold text-[42px] md:text-[62px] leading-none text-[#F5D64E]">
-					STABLE COIN
+					STABLECOIN
 				</span>
 				{/* <p className="max-w-[700px] font-medium text-[18px]">
 					$PUSD is a censorship-resistant USD-pegeed cryptocurrency that is
@@ -40,10 +40,13 @@ export const HeroSection = () => {
   </div> */}
 			<div className="relative">
 				<CroppedBorderContainer>
-					<p className="flex text-lg font-medium items-center font-Montserrat">
-						Strategic partnerships with Botanix Network
-						<Link className="ml-2 text-base text-[#F5D64E] flex" href="#">
-							READ MORE <ArrowRight color="#f5d64e" />
+					<p className="flex gap-2 text-lg items-center font-medium font-Montserrat">
+						Strategic partnerships with Botanix Labs
+						<Link
+							className="ml-2 text-[14px] items-center text-[#F5D64E] flex gap-1"
+							href="#"
+						>
+							READ MORE <ArrowRight size={16} color="#f5d64e" />
 						</Link>
 					</p>
 				</CroppedBorderContainer>

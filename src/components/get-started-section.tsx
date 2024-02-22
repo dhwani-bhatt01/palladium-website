@@ -35,13 +35,13 @@ export const GetStartedSection = () => {
 				<NotchedCard
 					image={BitcoinIcon}
 					desc="Get Interest-Free Liquidity on Bitcoin"
-					btnTxt="MINI PUSD"
+					btnTxt="MINT PUSD"
 					comingSoon
 				/>
 				<NotchedCard
 					image={RewardIcon}
 					desc="Earn Rewards with Stability Pool"
-					btnTxt="MINI PUSD"
+					btnTxt="STAKE PUSD"
 					comingSoon
 				/>
 				<NotchedCard
@@ -52,7 +52,7 @@ export const GetStartedSection = () => {
 				<NotchedCard
 					image={CoinIcon}
 					desc="Palladium Token for Value Accrual"
-					btnTxt="GET STARTED"
+					btnTxt="LEARN MORE"
 				/>
 			</div>
 		</div>

@@ -30,7 +30,7 @@ export const UseCaseComponent = () => {
 			<div className="grid grid-cols-[1fr_2fr] border border-[#F5D64E]">
 				<div className="border border-[#F5D64E]">
 					<UseCaseListItem
-						label="Currency for Network States"
+						label="Network States"
 						icons={{
 							selected: CurrencyForNetworkStatesBlack,
 							notSelected: CurrencyForNetworkStatesYellow,

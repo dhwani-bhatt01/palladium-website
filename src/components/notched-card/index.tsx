@@ -27,7 +27,9 @@ export const NotchedCard = (props: Props) => {
 					{btnTxt}
 				</FancyButton>
 				{comingSoon ? (
-					<div className="text-center text-[#F5D64E] mt-2">Coming Soon</div>
+					<div className="text-center text-[12px] text-[#F5D64E] mt-2">
+						Coming Soon
+					</div>
 				) : null}
 			</div>
 		</div>

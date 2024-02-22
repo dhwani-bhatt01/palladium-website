@@ -1,5 +1,6 @@
 "use client";
 
+import PalladiumFullLogo from "@/assets/Palladium Logo/Full logo.webp";
 import DiscordIcon from "@/assets/discord-icon.png";
 import DocsIcon from "@/assets/docs-icon.png";
 import MediumIcon from "@/assets/medium-icon.png";
@@ -26,9 +27,10 @@ export const Navbar = () => {
 		// <nav className="fixed top-0 left-0 right-0 z-10 flex items-center justify-between py-4 px-6 max-w-7xl mx-auto">
 		<nav className="sticky top-0 left-0 right-0 z-40 flex items-center justify-between py-4 px-6 max-w-7xl mx-auto">
 			<div>
-				<span className="text-[#F5D64E] font-bold text-[27px] md:text-[37px]">
+				<Image src={PalladiumFullLogo} alt="PalladiumFullLogo" />
+				{/* <span className="text-[#F5D64E] font-bold text-[27px] md:text-[37px]">
 					PALLADIUM
-				</span>
+				</span> */}
 			</div>
 			<div className="flex items-center gap-4 md:gap-8">
 				<div className="flex items-center gap-4 md:gap-8">

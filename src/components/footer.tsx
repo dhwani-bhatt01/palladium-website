@@ -1,6 +1,7 @@
 import DiscordIcon from "@/assets/discord-icon.png";
 import DocsIcon from "@/assets/docs-icon.png";
-import FooterPalladiumIconWithShadow from "@/assets/footer-icons/footer-palladium-icon-with-shadow.png";
+// import FooterPalladiumIconWithShadow from "@/assets/footer-icons/footer-palladium-icon-with-shadow.png";
+import FooterPalladiumIconWithShadow from "@/assets/footer-icons/footer-icon-new.png";
 import MediumIcon from "@/assets/medium-icon.png";
 import TwitterIcon from "@/assets/twitter-icon.png";
 import Image from "next/image";
@@ -26,7 +27,7 @@ export const Footer = () => {
 				</div>
 			</div>
 			<InputWithButton />
-			<span className="text-[21px] font-semibold">JOIN THE COMMUNITY</span>
+			{/* <span className="text-[21px] font-semibold">JOIN THE COMMUNITY</span> */}
 
 			<div className="flex gap-16 mt-4 justify-center flex-wrap">
 				<div className="relative w-50 py-4 px-10 corners">

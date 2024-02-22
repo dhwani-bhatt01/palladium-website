@@ -2,9 +2,15 @@
 
 import Ellipse from "@/assets/ellipse-new.png";
 // import DiamondWithGradient from "@/assets/high-shadow-diamond.png";
-import DiamondFrameOne from "@/assets/diamond-frames/diamond-frame-one.png";
-import DiamondFrameThree from "@/assets/diamond-frames/diamond-frame-three.png";
-import DiamondFrameTwo from "@/assets/diamond-frames/diamond-frame-two.png";
+// import DiamondFrameOne from "@/assets/diamond-frames/diamond-frame-one.png";
+// import DiamondFrameThree from "@/assets/diamond-frames/diamond-frame-three.png";
+// import DiamondFrameTwo from "@/assets/diamond-frames/diamond-frame-two.png";
+// import DiamondFrameOne from "@/assets/BG Shapes/empty.webp";
+// import DiamondFrameThree from "@/assets/BG Shapes/with circles.webp";
+// import DiamondFrameTwo from "@/assets/BG Shapes/without circles.webp";
+import DiamondFrameThree from "@/assets/BG Shapes 2/Frame 4.png";
+import DiamondFrameTwo from "@/assets/BG Shapes 2/Frame 6.png";
+import DiamondFrameOne from "@/assets/BG Shapes 2/Frame 8.png";
 import VerticleLine from "@/assets/verticle-line.png";
 import {
 	AnimatePresence,
@@ -228,7 +234,7 @@ export const ParallaxHeroSection = () => {
 
 				<motion.h3
 					style={{ y: textY }}
-					className="text-center font-semibold text-[36px] max-w-4xl"
+					className="text-center font-semibold text-[36px] max-w-4xl mt-4"
 					initial={{ opacity: 0 }}
 					whileInView={{ opacity: 1 }}
 					viewport={{ once: false }}
@@ -238,8 +244,8 @@ export const ParallaxHeroSection = () => {
 						delay: 1.5,
 					}}
 				>
-					$PUSD is a censorship-resistant USD-pegeed cryptocurrency that is
-					backed by{" "}
+					A censorship-resistant USD-pegeed cryptocurrency that is backed by
+					<br />
 					<span className="text-[#F5D64E]">
 						security & robustness of Bitcoin.
 					</span>
@@ -295,12 +301,13 @@ export const ParallaxHeroSection = () => {
 						{scrollDirection === "up" ? (
 							<div className="w-72">
 								<h2 className="font-semibold text-[24px]">
-									<span className="text-[#F5D64E]">SECURED</span> BY BITCOIN
+									<span className="text-[#F5D64E]">Secured </span> by BITCOIN
+									NETWORK
 								</h2>
 								<p className="font-medium text-[16px] font-Montserrat">
-									Palladium protocol is operated upon Botanix - a truly
-									decentralized smart contract platform secured by the most
-									robust blockchain in the world.
+									Palladium is operated upon Botanix - a truly decentralized
+									smart contract platform secured by Bitcoin Network - the most
+									secure blockchain in the world.
 								</p>
 							</div>
 						) : (
@@ -316,31 +323,76 @@ export const ParallaxHeroSection = () => {
 								}}
 							>
 								<h2 className="font-semibold text-[24px]">
-									<span className="text-[#F5D64E]">SECURED</span> BY BITCOIN
+									<span className="text-[#F5D64E]">Secured </span> by BITCOIN
+									NETWORK
 								</h2>
 								<p className="font-medium text-[16px] font-Montserrat">
-									Palladium protocol is operated upon Botanix - a truly
-									decentralized smart contract platform secured by the most
-									robust blockchain in the world.
+									Palladium is operated upon Botanix - a truly decentralized
+									smart contract platform secured by Bitcoin Network - the most
+									secure blockchain in the world.
 								</p>
+								{/* <h2 className="font-semibold text-[24px]">
+									<span className="text-[#F5D64E]">Over-Collateralized</span>
+									with Bitcoin
+								</h2>
+								<p className="font-medium text-[16px] font-Montserrat">
+									$PUSD can only be minted using the most robust cryptocurrency
+									- the $BTC - and it always remains over-collateralized to
+									guarantee hard price floor of $1.
+								</p> */}
 							</motion.div>
 						)}
 
 						{scrollDirection === "up" ? (
 							<div className="w-72 mt-60">
 								<h2 className="font-semibold text-[24px]">
-									<span className="text-[#F5D64E]">GOVERNANCE-FREE</span> LIKE
-									BITCOIN
+									<span className="text-[#F5D64E]">Over-Collateralized </span>{" "}
+									with Bitcoin
 								</h2>
-								<p className="font-medium text-[16px] font-Montserrat">
-									Palladium employs an algorithmic monetary policy. There is no
-									governance, DAO, or admin keys to ensure protocol can never be
-									censored or manipulated.
-								</p>
+								<div className="font-medium text-[16px] font-Montserrat">
+									$PUSD can only be minted using the most robust cryptocurrency
+									- the $BTC - and it always remains over-collateralized to
+									guarantee hard price floor of $1.
+								</div>
 							</div>
 						) : (
 							<motion.div
 								className="w-72 mt-60"
+								initial={{ opacity: 0 }}
+								whileInView={{ opacity: 1 }}
+								transition={{
+									type: "spring",
+									duration: 1,
+									delay: 2,
+								}}
+							>
+								<h2 className="font-semibold text-[24px]">
+									<span className="text-[#F5D64E]">Over-Collateralized </span>{" "}
+									with Bitcoin
+								</h2>
+								<div className="font-medium text-[16px] font-Montserrat">
+									$PUSD can only be minted using the most robust cryptocurrency
+									- the $BTC - and it always remains over-collateralized to
+									guarantee hard price floor of $1.
+								</div>
+							</motion.div>
+						)}
+
+						{scrollDirection === "up" ? (
+							<div className="w-72">
+								<h2 className="font-semibold text-[24px]">
+									<span className="text-[#F5D64E]">GOVERNANCE-FREE</span> LIKE
+									BITCOIN
+								</h2>
+								<p className="font-medium text-[16px] font-Montserrat">
+									An algorithmic monetary policy that makes Palladium fully
+									autonomous. No governance, DAO, or admin keys that can censor
+									or manipulate the protocol.
+								</p>
+							</div>
+						) : (
+							<motion.div
+								className="w-72"
 								initial={{ opacity: 0 }}
 								whileInView={{ opacity: 1 }}
 								transition={{
@@ -354,42 +406,9 @@ export const ParallaxHeroSection = () => {
 									BITCOIN
 								</h2>
 								<p className="font-medium text-[16px] font-Montserrat">
-									Palladium employs an algorithmic monetary policy. There is no
-									governance, DAO, or admin keys to ensure protocol can never be
-									censored or manipulated.
-								</p>
-							</motion.div>
-						)}
-
-						{scrollDirection === "up" ? (
-							<div className="w-72">
-								<h2 className="font-semibold text-[24px]">
-									<span className="text-[#F5D64E]">SECURED</span> BY BITCOIN
-								</h2>
-								<p className="font-medium text-[16px]">
-									Palladium protocol is operated upon Botanix - a truly
-									decentralized smart contract platform secured by the most
-									robust blockchain in the world.
-								</p>
-							</div>
-						) : (
-							<motion.div
-								className="w-72"
-								initial={{ opacity: 0 }}
-								whileInView={{ opacity: 1 }}
-								transition={{
-									type: "spring",
-									duration: 1,
-									delay: 2,
-								}}
-							>
-								<h2 className="font-semibold text-[24px]">
-									<span className="text-[#F5D64E]">SECURED</span> BY BITCOIN
-								</h2>
-								<p className="font-medium text-[16px]">
-									Palladium protocol is operated upon Botanix - a truly
-									decentralized smart contract platform secured by the most
-									robust blockchain in the world.
+									An algorithmic monetary policy that makes Palladium fully
+									autonomous. No governance, DAO, or admin keys that can censor
+									or manipulate the protocol.
 								</p>
 							</motion.div>
 						)}
