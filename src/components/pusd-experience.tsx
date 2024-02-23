@@ -10,7 +10,7 @@ export const PusdExperience = () => {
 	return (
 		<div className="flex flex-col items-center gap-4 md:flex-row md:items-start md:*:w-1/2 mt-36">
 			<div className="md:sticky top-72">
-				<h1 className="text-[42px] font-semibold">
+				<h1 className="text-[22px] md:text-[42px] mb-2 md:mb-0 text-center md:text-left font-semibold">
 					A NETWORK OF APPS TO ENHANCE YOUR{" "}
 					<span className="text-[#F5D64E]">PUSD EXPERIENCE</span>
 				</h1>

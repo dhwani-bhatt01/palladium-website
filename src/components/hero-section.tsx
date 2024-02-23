@@ -1,4 +1,5 @@
 import SpiderIcon from "@/assets/spider-icon.png";
+import SpiderMobileIcon from "@/assets/spider-mobile-image.png";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,9 +8,9 @@ import { FancyButton } from "./fancy-button";
 
 export const HeroSection = () => {
 	return (
-		<div className="flex flex-col items-center justify-center text-center h-[650px] gap-24">
+		<div className="flex flex-col items-center justify-center text-center h-[500px] md:h-[650px] gap-24">
 			<div className="flex flex-col items-center gap-2">
-				<span className="font-bold text-[42px] md:text-[62px] leading-none">
+				<span className="font-bold text-[38px] md:text-[42px] md:text-[62px] leading-none">
 					WORLD&apos;S MOST RELIABLE
 				</span>
 				<span className="font-bold text-[42px] md:text-[62px] leading-none text-[#F5D64E]">
@@ -40,10 +41,10 @@ export const HeroSection = () => {
   </div> */}
 			<div className="relative">
 				<CroppedBorderContainer>
-					<p className="flex gap-2 text-lg items-center font-medium font-Montserrat">
+					<p className="flex flex-col py-2 md:py-0 md:flex-row gap-1 md:gap-2 text-[12px] md:text-lg items-center font-medium font-Montserrat">
 						Strategic partnership with Botanix Labs
 						<Link
-							className="ml-2 text-[14px] items-center text-[#F5D64E] flex gap-1"
+							className="ml-2 text-[10px] md:text-[14px] items-center text-[#F5D64E] flex gap-1"
 							href="#"
 						>
 							READ MORE <ArrowRight size={16} color="#f5d64e" />
@@ -51,8 +52,13 @@ export const HeroSection = () => {
 					</p>
 				</CroppedBorderContainer>
 				<Image
-					className="absolute -left-[4.35rem] -bottom-[4.35rem]"
+					className="hidden md:block absolute -left-[4.35rem] -bottom-[4.35rem]"
 					src={SpiderIcon}
+					alt="spider-icon"
+				/>
+				<Image
+					className="block md:hidden absolute -left-[2.35rem] -bottom-[3.35rem]"
+					src={SpiderMobileIcon}
 					alt="spider-icon"
 				/>
 			</div>

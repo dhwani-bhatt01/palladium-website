@@ -88,7 +88,7 @@ export const Footer = () => {
 				<span>Brand Kit</span>
 				<span>Terms of Services</span>
 			</div>
-			<span className="font-Montserrat text-[12px] text-[#83827d]">
+			<span className="font-Montserrat text-[12px] text-[#83827d] mt-2">
 				Palladium Protocol Copyright 2024
 			</span>
 		</div>

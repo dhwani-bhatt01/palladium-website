@@ -62,7 +62,7 @@ export const BlogsAndMediaSection = () => {
 
 	return (
 		<div className="mt-40 py-4 px-6 max-h-full">
-			<h1 className="font-semibold text-[42px] text-center mb-10">
+			<h1 className="font-semibold text-[27px] md:text-[42px] text-center mb-5 md:mb-10">
 				BLOGS AND MEDIA
 			</h1>
 			<div className="grid gap-16 justify-center md:grid-cols-3 md:grid-rows-2 mt-5">

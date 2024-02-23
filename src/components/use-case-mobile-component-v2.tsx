@@ -1,57 +1,16 @@
-// import CurrencyForNetworkStatesBlack from "@/assets/use-case-icons/currency-for-network-states-black.png";
-// import {
-// 	Accordion,
-// 	AccordionContent,
-// 	AccordionItem,
-// 	AccordionTrigger,
-// } from "@/components/ui/accordion";
-// // import UseCaseImgFour from "@/assets/use-case-img-four-with-shadow.png";
-// // import UseCaseImgThree from "@/assets/use-case-img-three-with-shadow.png";
-// // import UseCaseImgTwo from "@/assets/use-case-img-two-with-shadow.png";
-// import Image from "next/image";
-
-// export const UseCaseMobileComponentV2 = () => {
-// 	return (
-// 		<Accordion
-// 			type="single"
-// 			collapsible
-// 			className="w-full mt-10"
-// 			onChange={(e) => {
-// 				console.log(e);
-// 			}}
-// 		>
-// 			<AccordionItem value="item-1">
-// 				<AccordionTrigger>
-// 					<div className="flex items-center gap-3">
-// 						<Image src={CurrencyForNetworkStatesBlack} alt="usecaseimgone" />
-// 						<span className="text-inherit">Currency for Network States</span>
-// 					</div>
-// 				</AccordionTrigger>
-// 				<AccordionContent>
-// 					Yes. It adheres to the WAI-ARIA design pattern.
-// 				</AccordionContent>
-// 			</AccordionItem>
-
-// 			<AccordionItem value="item-2">
-// 				<AccordionTrigger>Is it styled?</AccordionTrigger>
-// 				<AccordionContent>
-// 					Yes. It comes with default styles that matches the other
-// 					components&apos; aesthetic.
-// 				</AccordionContent>
-// 			</AccordionItem>
-// 			<AccordionItem value="item-3">
-// 				<AccordionTrigger>Is it animated?</AccordionTrigger>
-// 				<AccordionContent>
-// 					Yes. It&apos;s animated by default, but you can disable it if you
-// 					prefer.
-// 				</AccordionContent>
-// 			</AccordionItem>
-// 		</Accordion>
-// 	);
-// };
-
 import UseCaseImgOne from "@/assets/UseCaseImgOne.png";
+// import CrowdFundingYellow from "@/assets/use-case-icons/crowd-funding-yellow.png";
+import CrowdFundingBlack from "@/assets/use-case-icons/crowd-funding-black.svg";
+import CrowdFundingYellow from "@/assets/use-case-icons/crowd-funding-yellow.svg";
 import CurrencyForNetworkStatesBlack from "@/assets/use-case-icons/currency-for-network-states-black.png";
+import CurrencyForNetworkStatesYellow from "@/assets/use-case-icons/currency-for-network-states-yellow.png";
+import MarginTradingBlack from "@/assets/use-case-icons/margin-trading-black.png";
+import MarginTradingYellow from "@/assets/use-case-icons/margin-trading-yellow.png";
+import PreservingWealthBlack from "@/assets/use-case-icons/preserving-wealth-black.png";
+import PreservingWealthYellow from "@/assets/use-case-icons/preserving-wealth-yellow.png";
+import YieldFarmingBlack from "@/assets/use-case-icons/yield-farming-black.png";
+import YieldFarmingYellow from "@/assets/use-case-icons/yield-farming-yellow.png";
+import UseCaseImgFive from "@/assets/use-case-img-five-with-shadow.png";
 import UseCaseImgFour from "@/assets/use-case-img-four-with-shadow.png";
 import UseCaseImgThree from "@/assets/use-case-img-three-with-shadow.png";
 import UseCaseImgTwo from "@/assets/use-case-img-two-with-shadow.png";
@@ -61,22 +20,51 @@ import {
 	AccordionItem,
 	AccordionTrigger,
 } from "@/components/ui/accordion";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { useState } from "react";
 
 export const UseCaseMobileComponentV2 = () => {
+	const [itemOpened, setItemOpened] = useState<string>(
+		"currency_for_network_states"
+	);
+
 	return (
 		<>
 			<div className="text-[22px] font-semibold text-center">
 				Unrestricted <span className="text-[#F5D64E]">Financial Services </span>
 				available to everyone.
 			</div>
-			<Accordion type="single" collapsible className="w-full mt-10 px-6">
+			<Accordion
+				type="single"
+				collapsible
+				className="w-full mt-10 px-6"
+				value={itemOpened}
+				onValueChange={(e) => setItemOpened(e)}
+				defaultValue="currency_for_network_states"
+			>
 				{/* Item One */}
 				<AccordionItem value="currency_for_network_states">
 					<AccordionTrigger>
-						<div className="flex items-center gap-3">
-							<Image src={CurrencyForNetworkStatesBlack} alt="usecaseimgone" />
-							<span className="text-inherit">Currency for Network States</span>
+						<div
+							className={cn("flex items-center gap-4", {
+								"text-black": itemOpened === "currency_for_network_states",
+							})}
+						>
+							{itemOpened === "currency_for_network_states" ? (
+								<Image
+									src={CurrencyForNetworkStatesBlack}
+									alt="usecaseimgone"
+								/>
+							) : (
+								<Image
+									src={CurrencyForNetworkStatesYellow}
+									alt="usecaseimgone"
+								/>
+							)}
+							<span className="text-inherit text-[16px] font-Montserrat">
+								Network States
+							</span>
 						</div>
 					</AccordionTrigger>
 					<AccordionContent
@@ -86,11 +74,11 @@ export const UseCaseMobileComponentV2 = () => {
 							backgroundRepeat: "no-repeat",
 						}}
 					>
-						<div className="min-h-[400px] p-6 flex flex-col justify-center">
-							<h2 className="text-[32px] leading-9 font-semibold">
+						<div className="min-h-[300px] p-6 flex flex-col justify-center">
+							<h2 className="text-[20px] leading-7 font-semibold">
 								Currency for Network States
 							</h2>
-							<p className="text-[16px] font-medium">
+							<p className="text-[12px] leading-4 font-medium font-Montserrat">
 								Palladium employs an algorithmic monetary policy. There is no
 								governance, DAO, or admin keys to ensure protocol can never be
 								censored or manipulated.
@@ -101,10 +89,26 @@ export const UseCaseMobileComponentV2 = () => {
 
 				{/* Item Two */}
 				<AccordionItem value="preserving_wealth">
-					<AccordionTrigger>
+					{/* <AccordionTrigger>
 						<div className="flex items-center gap-3">
 							<Image src={CurrencyForNetworkStatesBlack} alt="usecaseimgone" />
 							<span className="text-inherit">Preserving Wealth</span>
+						</div>
+					</AccordionTrigger> */}
+					<AccordionTrigger>
+						<div
+							className={cn("flex items-center gap-4", {
+								"text-black": itemOpened === "preserving_wealth",
+							})}
+						>
+							{itemOpened === "preserving_wealth" ? (
+								<Image src={PreservingWealthBlack} alt="usecaseimgone" />
+							) : (
+								<Image src={PreservingWealthYellow} alt="usecaseimgone" />
+							)}
+							<span className="text-inherit text-[16px] font-Montserrat">
+								Preserving Wealth
+							</span>
 						</div>
 					</AccordionTrigger>
 					<AccordionContent
@@ -114,9 +118,9 @@ export const UseCaseMobileComponentV2 = () => {
 							backgroundRepeat: "no-repeat",
 						}}
 					>
-						<div className="min-h-[400px] p-6 flex flex-col justify-center">
-							<h2 className="text-[32px] leading-9 font-semibold">
-								Currency for Network States
+						<div className="min-h-[300px] p-6 flex flex-col justify-center">
+							<h2 className="text-[20px] leading-7 font-semibold">
+								Preserving Wealth
 							</h2>
 							<p className="text-[16px] font-medium">
 								Palladium employs an algorithmic monetary policy. There is no
@@ -129,10 +133,26 @@ export const UseCaseMobileComponentV2 = () => {
 
 				{/* Item Three*/}
 				<AccordionItem value="margin_trading">
-					<AccordionTrigger>
+					{/* <AccordionTrigger>
 						<div className="flex items-center gap-3">
 							<Image src={CurrencyForNetworkStatesBlack} alt="usecaseimgone" />
 							<span className="text-inherit">Margin Trading</span>
+						</div>
+					</AccordionTrigger> */}
+					<AccordionTrigger>
+						<div
+							className={cn("flex items-center gap-4", {
+								"text-black": itemOpened === "margin_trading",
+							})}
+						>
+							{itemOpened === "margin_trading" ? (
+								<Image src={MarginTradingBlack} alt="usecaseimgone" />
+							) : (
+								<Image src={MarginTradingYellow} alt="usecaseimgone" />
+							)}
+							<span className="text-inherit text-[16px] font-Montserrat">
+								Margin Trading
+							</span>
 						</div>
 					</AccordionTrigger>
 					<AccordionContent
@@ -142,9 +162,9 @@ export const UseCaseMobileComponentV2 = () => {
 							backgroundRepeat: "no-repeat",
 						}}
 					>
-						<div className="min-h-[400px] p-6 flex flex-col justify-center">
-							<h2 className="text-[32px] leading-9 font-semibold">
-								Currency for Network States
+						<div className="min-h-[300px] p-6 flex flex-col justify-center">
+							<h2 className="text-[20px] leading-7 font-semibold">
+								Margin Trading
 							</h2>
 							<p className="text-[16px] font-medium">
 								Palladium employs an algorithmic monetary policy. There is no
@@ -157,10 +177,26 @@ export const UseCaseMobileComponentV2 = () => {
 
 				{/* Item Four */}
 				<AccordionItem value="yield_farming">
-					<AccordionTrigger>
+					{/* <AccordionTrigger>
 						<div className="flex items-center gap-3">
 							<Image src={CurrencyForNetworkStatesBlack} alt="usecaseimgone" />
 							<span className="text-inherit">Yield Farming</span>
+						</div>
+					</AccordionTrigger> */}
+					<AccordionTrigger>
+						<div
+							className={cn("flex items-center gap-4", {
+								"text-black": itemOpened === "yield_farming",
+							})}
+						>
+							{itemOpened === "yield_farming" ? (
+								<Image src={YieldFarmingBlack} alt="usecaseimgone" />
+							) : (
+								<Image src={YieldFarmingYellow} alt="usecaseimgone" />
+							)}
+							<span className="text-inherit text-[16px] font-Montserrat">
+								Yield Farming
+							</span>
 						</div>
 					</AccordionTrigger>
 					<AccordionContent
@@ -170,9 +206,9 @@ export const UseCaseMobileComponentV2 = () => {
 							backgroundRepeat: "no-repeat",
 						}}
 					>
-						<div className="min-h-[400px] p-6 flex flex-col justify-center">
-							<h2 className="text-[32px] leading-9 font-semibold">
-								Currency for Network States
+						<div className="min-h-[300px] p-6 flex flex-col justify-center">
+							<h2 className="text-[20px] leading-7 font-semibold">
+								Yield Farming
 							</h2>
 							<p className="text-[16px] font-medium">
 								Palladium employs an algorithmic monetary policy. There is no
@@ -185,22 +221,42 @@ export const UseCaseMobileComponentV2 = () => {
 
 				{/* Item Five */}
 				<AccordionItem value="crowd_funding">
-					<AccordionTrigger>
+					{/* <AccordionTrigger>
 						<div className="flex items-center gap-3">
 							<Image src={CurrencyForNetworkStatesBlack} alt="usecaseimgone" />
 							<span className="text-inherit">Currency for Network States</span>
 						</div>
+					</AccordionTrigger> */}
+					<AccordionTrigger>
+						<div
+							className={cn("flex items-center gap-4", {
+								"text-black": itemOpened === "crowd_funding",
+							})}
+						>
+							{itemOpened === "crowd_funding" ? (
+								<Image
+									src={CrowdFundingYellow}
+									alt="usecaseimgone"
+									width={55}
+								/>
+							) : (
+								<Image src={CrowdFundingBlack} alt="usecaseimgone" width={55} />
+							)}
+							<span className="text-inherit text-[16px] font-Montserrat">
+								Crowd Funding
+							</span>
+						</div>
 					</AccordionTrigger>
 					<AccordionContent
 						style={{
-							backgroundImage: `url(${UseCaseImgFour.src})`,
+							backgroundImage: `url(${UseCaseImgFive.src})`,
 							backgroundPosition: "right",
 							backgroundRepeat: "no-repeat",
 						}}
 					>
-						<div className="min-h-[400px] p-6 flex flex-col justify-center">
-							<h2 className="text-[32px] leading-9 font-semibold">
-								Currency for Network States
+						<div className="min-h-[300px] p-6 flex flex-col justify-center">
+							<h2 className="text-[20px] leading-7 font-semibold">
+								Crowd Funding
 							</h2>
 							<p className="text-[16px] font-medium">
 								Palladium employs an algorithmic monetary policy. There is no

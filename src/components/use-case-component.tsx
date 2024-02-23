@@ -1,6 +1,8 @@
 "use client";
 
 import UseCaseImgOne from "@/assets/UseCaseImgOne.png";
+import CrowdFundingYellow from "@/assets/use-case-icons/crowd-funding-black.svg";
+import CrowdFundingBlack from "@/assets/use-case-icons/crowd-funding-yellow.svg";
 import CurrencyForNetworkStatesBlack from "@/assets/use-case-icons/currency-for-network-states-black.png";
 import CurrencyForNetworkStatesYellow from "@/assets/use-case-icons/currency-for-network-states-yellow.png";
 import MarginTradingBlack from "@/assets/use-case-icons/margin-trading-black.png";
@@ -76,8 +78,8 @@ export const UseCaseComponent = () => {
 					<UseCaseListItem
 						label="Crowd Funding"
 						icons={{
-							selected: YieldFarmingBlack,
-							notSelected: YieldFarmingYellow,
+							selected: CrowdFundingBlack,
+							notSelected: CrowdFundingYellow,
 						}}
 						isSelected={selectedCase === "crowd_funding"}
 						value="crowd_funding"
