@@ -1,6 +1,5 @@
 "use client";
 import DiamondFrameThree from "@/assets/BG Shapes 2/Frame 4.png";
-import DiamondFrameTwo from "@/assets/BG Shapes 2/Frame 6.png";
 import DiamondFrameOne from "@/assets/BG Shapes 2/Frame 8.png";
 import {
 	AnimatePresence,
@@ -83,24 +82,30 @@ export const ParallaxHeroSectionMobile = () => {
 		};
 	}, []);
 
-	useEffect(() => {
-		if (isAtTop) {
-			console.log("Div touches the top of the viewport");
-			document.body.style.overflowY = "hidden";
-			setTimeout(() => {
-				document.body.style.overflowY = "auto";
-			}, 2000);
-		}
-	}, [isAtTop]);
+	// useEffect(() => {
+	// 	if (isAtTop) {
+	// 		console.log("Div touches the top of the viewport");
+	// 		document.body.style.overflowY = "hidden";
+	// 		setTimeout(() => {
+	// 			document.body.style.overflowY = "auto";
+	// 		}, 2000);
+	// 	}
+	// }, [isAtTop]);
 
 	useEffect(() => {
 		setPrevScrollPos(window.pageYOffset);
-		window.addEventListener("scroll", () => {
+		const handleScroll = () => {
 			console.log(diamondY.get(), "diamondY");
 			const isDiamond100Percent = diamondY.get() === "100%";
-			console.log(isDiamond100Percent, "isDiamond100Percent");
+			console.log(isDiamond100Percent, "isDiamond100Percent - mobile");
 			setIsDiamond100(isDiamond100Percent);
-		});
+		};
+
+		window.addEventListener("scroll", handleScroll);
+
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
 	}, []);
 
 	useEffect(() => {
@@ -177,34 +182,34 @@ export const ParallaxHeroSectionMobile = () => {
 							transition={{ duration: 0.5, delay: 0 }}
 						/>
 					) : (
-						<>
-							{isDivTwo70 ? (
-								<motion.img
-									key="diamond-without-gradient"
-									src={DiamondFrameTwo.src}
-									alt="diamond"
-									style={{ y: diamondY }}
-									className="absolute top-36 h-[70vh] -translate-x-1"
-									initial={{ opacity: 0 }}
-									animate={{ opacity: 1 }}
-									exit={{ opacity: 0 }}
-									transition={{ duration: 0.5, delay: 0 }}
-								/>
-							) : (
-								<motion.img
-									key="diamond-without-gradient"
-									src={DiamondFrameOne.src}
-									alt="diamond"
-									style={{ y: diamondY }}
-									className="absolute top-36 h-[70vh] -translate-x-1"
-									initial={{ opacity: 0 }}
-									animate={{ opacity: 1 }}
-									exit={{ opacity: 0 }}
-									transition={{ duration: 0.5, delay: 0 }}
-								/>
-							)}
-						</>
+						// <>
+						// 	{isDivTwo70 ? (
+						// 		<motion.img
+						// 			key="diamond-without-gradient"
+						// 			src={DiamondFrameTwo.src}
+						// 			alt="diamond"
+						// 			style={{ y: diamondY }}
+						// 			className="absolute top-36 h-[70vh] -translate-x-1"
+						// 			initial={{ opacity: 0 }}
+						// 			animate={{ opacity: 1 }}
+						// 			exit={{ opacity: 0 }}
+						// 			transition={{ duration: 0.5, delay: 0 }}
+						// 		/>
+						// ) : (
+						<motion.img
+							key="diamond-without-gradient"
+							src={DiamondFrameOne.src}
+							alt="diamond"
+							style={{ y: diamondY }}
+							className="absolute top-36 h-[70vh] -translate-x-1"
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
+							exit={{ opacity: 0 }}
+							transition={{ duration: 0.5, delay: 0 }}
+						/>
 					)}
+					{/* </> */}
+					{/* )} */}
 				</AnimatePresence>
 
 				<motion.h2
@@ -293,35 +298,39 @@ export const ParallaxHeroSectionMobile = () => {
 								<h2 className="font-semibold text-[24px]">
 									<span className="text-[#F5D64E]">SECURED</span> BY BITCOIN
 								</h2>
-								<p className="font-medium text-[16px]">
+								<p className="font-medium text-[16px] font-Montserrat">
 									Palladium protocol is operated upon Botanix - a truly
 									decentralized smart contract platform secured by the most
 									robust blockchain in the world.
 								</p>
 							</div>
 						) : (
-							<motion.div
-								className="w-72"
-								initial={{ opacity: 0 }}
-								whileInView={{ opacity: 1 }}
-								viewport={{ once: false }}
-								transition={{
-									type: "spring",
-									duration: 1,
-									delay: 0,
-								}}
-							>
+							// <motion.div
+							// 	className="w-72"
+							// 	initial={{ opacity: 0 }}
+							// 	whileInView={{ opacity: 1 }}
+							// 	viewport={{ once: false }}
+							// 	transition={{
+							// 		type: "spring",
+							// 		duration: 1,
+							// 		delay: 0,
+							// 	}}
+							// >
+							<div className="w-72">
 								<h2 className="font-semibold text-[24px]">
 									<span className="text-[#F5D64E]">SECURED</span> BY BITCOIN
 								</h2>
-								<p className="font-medium text-[16px]">
+								<p className="font-medium text-[16px] font-Montserrat">
 									Palladium protocol is operated upon Botanix - a truly
 									decentralized smart contract platform secured by the most
 									robust blockchain in the world.
 								</p>
-							</motion.div>
+							</div>
+
+							// </motion.div>
 						)}
-						<motion.div
+						<div className="w-[1px] h-16 bg-[#f5d64e] mx-auto"></div>
+						{/* <motion.div
 							className="w-[1px] h-16 bg-[#f5d64e] mx-auto"
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1 }}
@@ -331,7 +340,7 @@ export const ParallaxHeroSectionMobile = () => {
 								duration: 1,
 								delay: 1,
 							}}
-						/>
+						/> */}
 
 						{scrollDirection === "up" ? (
 							<div className="w-72">
@@ -339,35 +348,39 @@ export const ParallaxHeroSectionMobile = () => {
 									<span className="text-[#F5D64E]">GOVERNANCE-FREE</span> LIKE
 									BITCOIN
 								</h2>
-								<p className="font-medium text-[16px]">
+								<p className="font-medium text-[16px] font-Montserrat">
 									An algorithmic monetary policy that makes Palladium fully
 									autonomous. No governance, DAO, or admin keys that can censor
 									or manipulate the protocol.
 								</p>
 							</div>
 						) : (
-							<motion.div
-								className="w-72"
-								initial={{ opacity: 0 }}
-								whileInView={{ opacity: 1 }}
-								transition={{
-									type: "spring",
-									duration: 1,
-									delay: 1,
-								}}
-							>
+							// <motion.div
+							// 	className="w-72"
+							// 	initial={{ opacity: 0 }}
+							// 	whileInView={{ opacity: 1 }}
+							// 	transition={{
+							// 		type: "spring",
+							// 		duration: 1,
+							// 		delay: 1,
+							// 	}}
+							// >
+							<div className="w-72">
 								<h2 className="font-semibold text-[24px]">
 									<span className="text-[#F5D64E]">GOVERNANCE-FREE</span> LIKE
 									BITCOIN
 								</h2>
-								<p className="font-medium text-[16px]">
+								<p className="font-medium text-[16px] font-Montserrat">
 									An algorithmic monetary policy that makes Palladium fully
 									autonomous. No governance, DAO, or admin keys that can censor
 									or manipulate the protocol.
 								</p>
-							</motion.div>
+							</div>
+
+							// </motion.div>
 						)}
-						<motion.div
+						<div className="w-[1px] h-16 bg-[#f5d64e] mx-auto"></div>
+						{/* <motion.div
 							className="w-[1px] h-16 bg-[#f5d64e] mx-auto"
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1 }}
@@ -377,7 +390,7 @@ export const ParallaxHeroSectionMobile = () => {
 								duration: 1,
 								delay: 1.5,
 							}}
-						/>
+						/> */}
 
 						{scrollDirection === "up" ? (
 							<div className="w-72">
@@ -385,33 +398,36 @@ export const ParallaxHeroSectionMobile = () => {
 									<span className="text-[#F5D64E]">Over Collateralized</span>{" "}
 									With BITCOIN
 								</h2>
-								<p className="font-medium text-[16px]">
+								<p className="font-medium text-[16px] font-Montserrat">
 									$PUSD can only be minted using the most robust cryptocurrency
 									- the $BTC - and it always remains over-collateralized to
 									guarantee hard price floor of $1.
 								</p>
 							</div>
 						) : (
-							<motion.div
-								className="w-72"
-								initial={{ opacity: 0 }}
-								whileInView={{ opacity: 1 }}
-								transition={{
-									type: "spring",
-									duration: 1,
-									delay: 1,
-								}}
-							>
+							// <motion.div
+							// 	className="w-72"
+							// 	initial={{ opacity: 0 }}
+							// 	whileInView={{ opacity: 1 }}
+							// 	transition={{
+							// 		type: "spring",
+							// 		duration: 1,
+							// 		delay: 1,
+							// 	}}
+							// >
+							<div className="w-72">
 								<h2 className="font-semibold text-[24px]">
 									<span className="text-[#F5D64E]">Over Collateralized</span>{" "}
 									With BITCOIN
 								</h2>
-								<p className="font-medium text-[16px]">
+								<p className="font-medium text-[16px] font-Montserrat">
 									$PUSD can only be minted using the most robust cryptocurrency
 									- the $BTC - and it always remains over-collateralized to
 									guarantee hard price floor of $1.
 								</p>
-							</motion.div>
+							</div>
+
+							// </motion.div>
 						)}
 					</div>
 				)}

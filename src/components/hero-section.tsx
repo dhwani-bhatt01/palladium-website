@@ -10,7 +10,7 @@ export const HeroSection = () => {
 	return (
 		<div className="flex flex-col items-center justify-center text-center h-[500px] md:h-[650px] gap-24">
 			<div className="flex flex-col items-center gap-2">
-				<span className="font-bold text-[38px] md:text-[42px] md:text-[62px] leading-none">
+				<span className="font-bold text-[38px] md:text-[42px] leading-none">
 					WORLD&apos;S MOST RELIABLE
 				</span>
 				<span className="font-bold text-[42px] md:text-[62px] leading-none text-[#F5D64E]">
@@ -28,7 +28,7 @@ export const HeroSection = () => {
 					<Button className="">GET STARTED</Button>
 				</div> */}
 				<div className="mt-9">
-					<FancyButton>Get Started</FancyButton>
+					<FancyButton isColoredBackground>Get Started</FancyButton>
 				</div>
 			</div>
 			{/* <div className="border border-[#F5D64E] p-4 [clip-path:polygon(1rem_0%,_100%_0,_100%_calc(100%_-_1rem),_calc(100%_-_1rem)_100%,_0_100%,_0%_1rem)]">

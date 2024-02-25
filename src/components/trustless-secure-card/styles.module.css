@@ -1,0 +1,50 @@
+.container {
+	position: relative;
+	clip-path: polygon(
+		/* 1st dot */ 2px 0%,
+		/* 2nd dot */ calc(100% - 4rem) 0,
+		/* 3rd dot */ 100% 4rem,
+		/* 4th dot */ 100% 100%,
+		/* 5th dot */ 0 100%,
+		/* 6th dot */ 0% 4rem
+	);
+	/* width: 260px; */
+	background-color: red;
+}
+.container::after,
+.container::before {
+	position: absolute;
+	inset: 0;
+	content: "";
+}
+
+.container::before {
+	clip-path: polygon(
+		/* 1st dot */ 2px 0%,
+		/* 2nd dot */ calc(100% - 4rem) 0,
+		/* 3rd dot */ 100% 4rem,
+		/* 4th dot */ 100% 100%,
+		/* 5th dot */ 0 100%,
+		/* 6th dot */ 0% 4rem
+	);
+	background-color: #f5d64e;
+	z-index: -2;
+}
+
+.container::after {
+	background-image: linear-gradient(
+		135deg,
+		rgba(245, 214, 78, 0.18253238795518212) 0%,
+		rgba(35, 35, 35, 0) 100%
+	);
+	clip-path: polygon(
+		/* 1st dot */ 4px 2px,
+		/* 2nd dot */ calc(100% - 4rem) 2px,
+		/* 3rd dot */ calc(100% - 2px) 4rem,
+		/* 4th dot */ calc(100% - 2px) calc(100% - 2px),
+		/* 5th dot */ 2px calc(100% - 2px),
+		/* 6th dot */ 2px 4rem
+	);
+	background-color: #0a0a0a;
+	z-index: -1;
+}

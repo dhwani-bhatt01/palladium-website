@@ -30,7 +30,7 @@ export const Footer = () => {
 			<InputWithButton />
 			{/* <span className="text-[21px] font-semibold">JOIN THE COMMUNITY</span> */}
 
-			<div className="flex gap-16 mt-4 justify-center flex-wrap">
+			<div className="md:flex hidden gap-16 mt-4 justify-center flex-wrap">
 				<div className="relative w-50 py-4 px-10 corners">
 					<div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-[#F5D64E]"></div>
 					<div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-[#F5D64E]"></div>
@@ -83,6 +83,61 @@ export const Footer = () => {
 					</Link>
 				</div>
 			</div>
+
+			<div className="flex gap-6 mt-4 md:hidden justify-center flex-wrap">
+				<div className="relative w-30 py-4 px-4 corners">
+					<div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-[#F5D64E]"></div>
+					<div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-[#F5D64E]"></div>
+					<div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#F5D64E]"></div>
+					<div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#F5D64E]"></div>
+					<Link
+						className="flex items-center gap-2 text-[#F5D64E] font-Montserrat"
+						href={"#"}
+					>
+						<Image src={TwitterIcon} alt="twitter-icon" /> Twitter
+					</Link>
+				</div>
+
+				<div className="relative w-30 py-4 px-4  corners">
+					<div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-[#F5D64E]"></div>
+					<div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-[#F5D64E]"></div>
+					<div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#F5D64E]"></div>
+					<div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#F5D64E]"></div>
+					<Link
+						className="flex items-center gap-2 text-[#F5D64E] font-Montserrat"
+						href={"#"}
+					>
+						<Image src={DiscordIcon} alt="discord-icon" /> Discord
+					</Link>
+				</div>
+
+				<div className="relative w-30 py-4 px-4  corners">
+					<div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-[#F5D64E]"></div>
+					<div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-[#F5D64E]"></div>
+					<div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#F5D64E]"></div>
+					<div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#F5D64E]"></div>
+					<Link
+						className="flex items-center gap-2 text-[#F5D64E] font-Montserrat"
+						href={"#"}
+					>
+						<Image src={MediumIcon} alt="medium-icon" /> Medium
+					</Link>
+				</div>
+
+				<div className="relative w-30 py-4 px-4  corners">
+					<div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-[#F5D64E]"></div>
+					<div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-[#F5D64E]"></div>
+					<div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#F5D64E]"></div>
+					<div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#F5D64E]"></div>
+					<Link
+						className="flex items-center gap-2 text-[#F5D64E] font-Montserrat"
+						href={"#"}
+					>
+						<Image src={DocsIcon} alt="docs-icon" /> Docs
+					</Link>
+				</div>
+			</div>
+
 			<div className="flex flex-col justify-center gap-2 text-center mt-4 md:flex-row md:gap-20 md:mt-12 font-Montserrat">
 				<span>Whitepaper</span>
 				<span>Brand Kit</span>

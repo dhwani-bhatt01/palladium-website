@@ -9,7 +9,6 @@ import Ellipse from "@/assets/ellipse-new.png";
 // import DiamondFrameThree from "@/assets/BG Shapes/with circles.webp";
 // import DiamondFrameTwo from "@/assets/BG Shapes/without circles.webp";
 import DiamondFrameThree from "@/assets/BG Shapes 2/Frame 4.png";
-import DiamondFrameTwo from "@/assets/BG Shapes 2/Frame 6.png";
 import DiamondFrameOne from "@/assets/BG Shapes 2/Frame 8.png";
 import VerticleLine from "@/assets/verticle-line.png";
 import {
@@ -105,12 +104,18 @@ export const ParallaxHeroSection = () => {
 
 	useEffect(() => {
 		setPrevScrollPos(window.pageYOffset);
-		window.addEventListener("scroll", () => {
+		const handleScroll = () => {
 			console.log(diamondY.get(), "diamondY");
 			const isDiamond100Percent = diamondY.get() === "100%";
-			console.log(isDiamond100Percent, "isDiamond100Percent");
+			console.log(isDiamond100Percent, "isDiamond100Percent - desktop");
 			setIsDiamond100(isDiamond100Percent);
-		});
+		};
+
+		window.addEventListener("scroll", handleScroll);
+
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
 	}, []);
 
 	useEffect(() => {
@@ -188,7 +193,7 @@ export const ParallaxHeroSection = () => {
 						/>
 					) : (
 						<>
-							{isDivTwo70 ? (
+							{/* {isDivTwo70 ? (
 								<motion.img
 									key="diamond-without-gradient"
 									src={DiamondFrameTwo.src}
@@ -200,19 +205,19 @@ export const ParallaxHeroSection = () => {
 									exit={{ opacity: 0 }}
 									transition={{ duration: 0.5, delay: 0 }}
 								/>
-							) : (
-								<motion.img
-									key="diamond-without-gradient"
-									src={DiamondFrameOne.src}
-									alt="diamond"
-									style={{ y: diamondY }}
-									className="absolute top-36 h-[70vh] -translate-x-1"
-									initial={{ opacity: 0 }}
-									animate={{ opacity: 1 }}
-									exit={{ opacity: 0 }}
-									transition={{ duration: 0.5, delay: 0 }}
-								/>
-							)}
+							) : ( */}
+							<motion.img
+								key="diamond-without-gradient"
+								src={DiamondFrameOne.src}
+								alt="diamond"
+								style={{ y: diamondY }}
+								className="absolute top-36 h-[70vh] -translate-x-1"
+								initial={{ opacity: 0 }}
+								animate={{ opacity: 1 }}
+								exit={{ opacity: 0 }}
+								transition={{ duration: 0.5, delay: 0 }}
+							/>
+							{/* )} */}
 						</>
 					)}
 				</AnimatePresence>
