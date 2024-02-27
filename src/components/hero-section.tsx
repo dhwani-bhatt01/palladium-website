@@ -10,7 +10,7 @@ export const HeroSection = () => {
 	return (
 		<div className="flex flex-col items-center justify-center text-center h-[500px] md:h-[650px] gap-24">
 			<div className="flex flex-col items-center gap-2">
-				<span className="font-bold text-[38px] md:text-[42px] leading-none">
+				<span className="font-bold text-[42px] md:text-[62px] leading-none">
 					WORLD&apos;S MOST RELIABLE
 				</span>
 				<span className="font-bold text-[42px] md:text-[62px] leading-none text-[#F5D64E]">

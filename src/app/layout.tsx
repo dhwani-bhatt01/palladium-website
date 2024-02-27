@@ -7,9 +7,9 @@ import "./globals.css";
 // const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "Palladium Labs | World’s Most Reliable Stablecoin",
+	title: "Palladium | World’s Most Reliable Stablecoin",
 	description:
-		"A censorship-resistant USD/pegged cryptocurrency backed by the robustness of Bitcoin.",
+		"A censorship-resistant USD-pegged cryptocurrency backed by the robustness of Bitcoin.",
 	// icons: [
 	// 	{
 	// 		rel: "icon",
