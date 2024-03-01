@@ -9,7 +9,6 @@ import { Navbar } from "@/components/navbar";
 import { ParallaxHeroSection } from "@/components/parallax-hero-section";
 import { ParallaxHeroSectionMobile } from "@/components/parallax-hero-section-mobile";
 import { PusdExperience } from "@/components/pusd-experience";
-import { TrustlessSection } from "@/components/trustless-section";
 import { UseCaseComponent } from "@/components/use-case-component";
 import { UseCaseMobileComponentV2 } from "@/components/use-case-mobile-component-v2";
 import { useMedia } from "react-use";
@@ -25,7 +24,7 @@ export default function Home() {
 
 				{isWide ? <ParallaxHeroSection /> : <ParallaxHeroSectionMobile />}
 
-				<TrustlessSection />
+				{/* <TrustlessSection /> */}
 
 				<UseCaseComponent />
 				{/* <UseCaseMobileComponent /> */}

@@ -28,7 +28,7 @@ export const GetStartedSection = () => {
 	return (
 		<div className="flex flex-col mt-40 gap-16 px-6">
 			<div className="font-semibold text-[27px] md:text-[42px] text-center">
-				GET STARTED WITH <br />
+				GET STARTED WITH
 				<span className="text-[#F5D64E]"> PALLADIUM PROTOCOL</span>
 			</div>
 			<div className="flex justify-center gap-10 flex-wrap">

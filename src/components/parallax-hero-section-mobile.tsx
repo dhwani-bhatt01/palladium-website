@@ -236,7 +236,7 @@ export const ParallaxHeroSectionMobile = () => {
 					transition={{
 						type: "spring",
 						duration: 1,
-						delay: 1,
+						delay: 0,
 					}}
 				>
 					A censorship-resistant USD-pegeed cryptocurrency that is backed by

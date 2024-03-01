@@ -231,7 +231,7 @@ export const ParallaxHeroSection = () => {
 					transition={{
 						type: "spring",
 						duration: 1,
-						delay: 1,
+						delay: 0,
 					}}
 				>
 					MEET $PUSD
@@ -246,7 +246,7 @@ export const ParallaxHeroSection = () => {
 					transition={{
 						type: "spring",
 						duration: 1,
-						delay: 1.5,
+						delay: 0,
 					}}
 				>
 					A censorship-resistant USD-pegeed cryptocurrency that is backed by
