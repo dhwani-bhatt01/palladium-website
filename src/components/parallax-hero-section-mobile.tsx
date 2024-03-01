@@ -169,47 +169,35 @@ export const ParallaxHeroSectionMobile = () => {
 					className="absolute top-36 h-[70vh] -translate-x-1"
 				/> */}
 				<AnimatePresence>
-					{isDiamond100 ? (
-						<motion.img
-							key="diamond-with-gradient"
-							src={DiamondFrameThree.src}
-							alt="diamond"
-							style={{ y: diamondY }}
-							className="absolute top-36 h-[70vh] -translate-x-1"
-							initial={{ opacity: 0 }}
-							animate={{ opacity: 1 }}
-							exit={{ opacity: 0 }}
-							transition={{ duration: 0.5, delay: 0 }}
-						/>
-					) : (
-						// <>
-						// 	{isDivTwo70 ? (
-						// 		<motion.img
-						// 			key="diamond-without-gradient"
-						// 			src={DiamondFrameTwo.src}
-						// 			alt="diamond"
-						// 			style={{ y: diamondY }}
-						// 			className="absolute top-36 h-[70vh] -translate-x-1"
-						// 			initial={{ opacity: 0 }}
-						// 			animate={{ opacity: 1 }}
-						// 			exit={{ opacity: 0 }}
-						// 			transition={{ duration: 0.5, delay: 0 }}
-						// 		/>
-						// ) : (
-						<motion.img
-							key="diamond-without-gradient"
-							src={DiamondFrameOne.src}
-							alt="diamond"
-							style={{ y: diamondY }}
-							className="absolute top-36 h-[70vh] -translate-x-1"
-							initial={{ opacity: 0 }}
-							animate={{ opacity: 1 }}
-							exit={{ opacity: 0 }}
-							transition={{ duration: 0.5, delay: 0 }}
-						/>
-					)}
-					{/* </> */}
-					{/* )} */}
+					<motion.img
+						key="diamond-with-gradient"
+						src={DiamondFrameThree.src}
+						alt="diamond"
+						style={{
+							y: diamondY,
+							visibility: isDiamond100 ? "visible" : "hidden",
+						}}
+						className="absolute top-36 h-[70vh] -translate-x-1"
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						exit={{ opacity: 0 }}
+						transition={{ duration: 0.5, delay: 0 }}
+					/>
+
+					<motion.img
+						key="diamond-without-gradient"
+						src={DiamondFrameOne.src}
+						alt="diamond"
+						style={{
+							y: diamondY,
+							visibility: isDiamond100 ? "hidden" : "visible",
+						}}
+						className="absolute top-36 h-[70vh] -translate-x-1"
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						exit={{ opacity: 0 }}
+						transition={{ duration: 0.5, delay: 0 }}
+					/>
 				</AnimatePresence>
 
 				<motion.h2
