@@ -1,7 +1,7 @@
-import BitcoinIcon from "@/assets/Palladium Images/bitcoin-fire-icon.webp";
-import CoinIcon from "@/assets/Palladium Images/coin-icon.webp";
-import RewardIcon from "@/assets/Palladium Images/reward-icon.webp";
-import ToolIcon from "@/assets/Palladium Images/tool-icon.webp";
+import BitcoinIcon from "@/assets/PalladiumImages/bitcoin-fire-icon.webp";
+import CoinIcon from "@/assets/PalladiumImages/coin-icon.webp";
+import RewardIcon from "@/assets/PalladiumImages/reward-icon.webp";
+import ToolIcon from "@/assets/PalladiumImages/tool-icon.webp";
 import { NotchedCard } from "./notched-card";
 
 const container = {

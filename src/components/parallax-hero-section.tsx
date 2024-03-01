@@ -8,8 +8,8 @@ import Ellipse from "@/assets/ellipse-new.png";
 // import DiamondFrameOne from "@/assets/BG Shapes/empty.webp";
 // import DiamondFrameThree from "@/assets/BG Shapes/with circles.webp";
 // import DiamondFrameTwo from "@/assets/BG Shapes/without circles.webp";
-import DiamondFrameThree from "@/assets/BG Shapes 2/Frame 4.png";
-import DiamondFrameOne from "@/assets/BG Shapes 2/Frame 8.png";
+import DiamondFrameThree from "@/assets/diamond shapes/Frame 4.webp";
+import DiamondFrameOne from "@/assets/diamond shapes/Frame 8.webp";
 import VerticleLine from "@/assets/verticle-line.png";
 import {
 	AnimatePresence,

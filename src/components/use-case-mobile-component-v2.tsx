@@ -1,15 +1,25 @@
 import UseCaseImgOne from "@/assets/UseCaseImgOne.png";
 // import CrowdFundingYellow from "@/assets/use-case-icons/crowd-funding-yellow.png";
-import CrowdFundingBlack from "@/assets/use-case-icons/crowd-funding-black.svg";
-import CrowdFundingYellow from "@/assets/use-case-icons/crowd-funding-yellow.svg";
-import CurrencyForNetworkStatesBlack from "@/assets/use-case-icons/currency-for-network-states-black.png";
-import CurrencyForNetworkStatesYellow from "@/assets/use-case-icons/currency-for-network-states-yellow.png";
-import MarginTradingBlack from "@/assets/use-case-icons/margin-trading-black.png";
-import MarginTradingYellow from "@/assets/use-case-icons/margin-trading-yellow.png";
-import PreservingWealthBlack from "@/assets/use-case-icons/preserving-wealth-black.png";
-import PreservingWealthYellow from "@/assets/use-case-icons/preserving-wealth-yellow.png";
-import YieldFarmingBlack from "@/assets/use-case-icons/yield-farming-black.png";
-import YieldFarmingYellow from "@/assets/use-case-icons/yield-farming-yellow.png";
+// import CrowdFundingBlack from "@/assets/use-case-icons/crowd-funding-black.svg";
+// import CrowdFundingYellow from "@/assets/use-case-icons/crowd-funding-yellow.svg";
+// import CurrencyForNetworkStatesBlack from "@/assets/use-case-icons/currency-for-network-states-black.png";
+// import CurrencyForNetworkStatesYellow from "@/assets/use-case-icons/currency-for-network-states-yellow.png";
+// import MarginTradingBlack from "@/assets/use-case-icons/margin-trading-black.png";
+// import MarginTradingYellow from "@/assets/use-case-icons/margin-trading-yellow.png";
+// import PreservingWealthBlack from "@/assets/use-case-icons/preserving-wealth-black.png";
+// import PreservingWealthYellow from "@/assets/use-case-icons/preserving-wealth-yellow.png";
+// import YieldFarmingBlack from "@/assets/use-case-icons/yield-farming-black.png";
+// import YieldFarmingYellow from "@/assets/use-case-icons/yield-farming-yellow.png";
+import CrowdFundingYellow from "@/assets/PalladiumImages/margin-trading.svg";
+import PreservingWealthBlack from "@/assets/icons/icon-five-black.svg";
+import MarginTradingBlack from "@/assets/icons/icon-four-black.svg";
+import PreservingWealthYellow from "@/assets/icons/icon-four.svg";
+import CrowdFundingBlack from "@/assets/icons/icon-one-black.svg";
+import YieldFarmingBlack from "@/assets/icons/icon-three-black.svg";
+import MarginTradingYellow from "@/assets/icons/icon-three.svg";
+import CurrencyForNetworkStatesBlack from "@/assets/icons/icon-two-black.svg";
+import YieldFarmingYellow from "@/assets/icons/icon-two.svg";
+import CurrencyForNetworkStatesYellow from "@/assets/icons/icons-one.svg";
 import UseCaseImgFive from "@/assets/use-case-img-five-with-shadow.png";
 import UseCaseImgFour from "@/assets/use-case-img-four-with-shadow.png";
 import UseCaseImgThree from "@/assets/use-case-img-three-with-shadow.png";
@@ -234,13 +244,13 @@ export const UseCaseMobileComponentV2 = () => {
 							})}
 						>
 							{itemOpened === "crowd_funding" ? (
+								<Image src={CrowdFundingBlack} alt="usecaseimgone" width={55} />
+							) : (
 								<Image
 									src={CrowdFundingYellow}
 									alt="usecaseimgone"
 									width={55}
 								/>
-							) : (
-								<Image src={CrowdFundingBlack} alt="usecaseimgone" width={55} />
 							)}
 							<span className="text-inherit text-[16px] font-Montserrat">
 								Crowd Funding

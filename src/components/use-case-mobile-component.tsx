@@ -1,7 +1,11 @@
-import UseCaseImgOne from "@/assets/UseCaseImgOne.png";
+// import UseCaseImgOne from "@/assets/UseCaseImgOne.png";
+// import UseCaseImgFour from "@/assets/use-case-img-four-with-shadow.png";
+// import UseCaseImgThree from "@/assets/use-case-img-three-with-shadow.png";
+// import UseCaseImgTwo from "@/assets/use-case-img-two-with-shadow.png";
+import UseCaseImgTwo from "@/assets/PalladiumImages/Coin-tree.webp";
+import UseCaseImgOne from "@/assets/PalladiumImages/NetworkStates.webp";
+import UseCaseImgThree from "@/assets/PalladiumImages/mask-group-1.webp";
 import UseCaseImgFour from "@/assets/use-case-img-four-with-shadow.png";
-import UseCaseImgThree from "@/assets/use-case-img-three-with-shadow.png";
-import UseCaseImgTwo from "@/assets/use-case-img-two-with-shadow.png";
 import { UseCaseListItemMobile } from "./use-case-list-item-mobile";
 
 export const UseCaseMobileComponent = () => {
