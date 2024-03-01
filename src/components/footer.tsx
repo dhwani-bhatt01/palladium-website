@@ -131,7 +131,8 @@ export const Footer = () => {
 					<div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#F5D64E]"></div>
 					<Link
 						className="flex items-center gap-2 text-[#F5D64E] font-Montserrat"
-						href={"#"}
+						href="https://docs.palladiumlabs.org/"
+						target="_blank"
 					>
 						<Image src={DocsIcon} alt="docs-icon" /> Docs
 					</Link>

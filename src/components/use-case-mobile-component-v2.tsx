@@ -61,17 +61,16 @@ export const UseCaseMobileComponentV2 = () => {
 								"text-black": itemOpened === "currency_for_network_states",
 							})}
 						>
-							{itemOpened === "currency_for_network_states" ? (
-								<Image
-									src={CurrencyForNetworkStatesBlack}
-									alt="usecaseimgone"
-								/>
-							) : (
-								<Image
-									src={CurrencyForNetworkStatesYellow}
-									alt="usecaseimgone"
-								/>
-							)}
+							<Image
+								src={
+									itemOpened === "currency_for_network_states"
+										? CurrencyForNetworkStatesBlack
+										: CurrencyForNetworkStatesYellow
+								}
+								alt="usecaseimgone"
+								height={56}
+								width={56}
+							/>
 							<span className="text-inherit text-[16px] font-Montserrat">
 								Network States
 							</span>
@@ -111,11 +110,16 @@ export const UseCaseMobileComponentV2 = () => {
 								"text-black": itemOpened === "preserving_wealth",
 							})}
 						>
-							{itemOpened === "preserving_wealth" ? (
-								<Image src={PreservingWealthBlack} alt="usecaseimgone" />
-							) : (
-								<Image src={PreservingWealthYellow} alt="usecaseimgone" />
-							)}
+							<Image
+								src={
+									itemOpened === "preserving_wealth"
+										? PreservingWealthBlack
+										: PreservingWealthYellow
+								}
+								alt="usecaseimgone"
+								height={56}
+								width={56}
+							/>
 							<span className="text-inherit text-[16px] font-Montserrat">
 								Preserving Wealth
 							</span>
@@ -155,11 +159,16 @@ export const UseCaseMobileComponentV2 = () => {
 								"text-black": itemOpened === "margin_trading",
 							})}
 						>
-							{itemOpened === "margin_trading" ? (
-								<Image src={MarginTradingBlack} alt="usecaseimgone" />
-							) : (
-								<Image src={MarginTradingYellow} alt="usecaseimgone" />
-							)}
+							<Image
+								src={
+									itemOpened === "margin_trading"
+										? MarginTradingBlack
+										: MarginTradingYellow
+								}
+								alt="usecaseimgone"
+								height={56}
+								width={56}
+							/>
 							<span className="text-inherit text-[16px] font-Montserrat">
 								Margin Trading
 							</span>
@@ -199,11 +208,16 @@ export const UseCaseMobileComponentV2 = () => {
 								"text-black": itemOpened === "yield_farming",
 							})}
 						>
-							{itemOpened === "yield_farming" ? (
-								<Image src={YieldFarmingBlack} alt="usecaseimgone" />
-							) : (
-								<Image src={YieldFarmingYellow} alt="usecaseimgone" />
-							)}
+							<Image
+								src={
+									itemOpened === "yield_farming"
+										? YieldFarmingBlack
+										: YieldFarmingYellow
+								}
+								alt="usecaseimgone"
+								height={56}
+								width={56}
+							/>
 							<span className="text-inherit text-[16px] font-Montserrat">
 								Yield Farming
 							</span>
@@ -243,15 +257,17 @@ export const UseCaseMobileComponentV2 = () => {
 								"text-black": itemOpened === "crowd_funding",
 							})}
 						>
-							{itemOpened === "crowd_funding" ? (
-								<Image src={CrowdFundingBlack} alt="usecaseimgone" width={55} />
-							) : (
-								<Image
-									src={CrowdFundingYellow}
-									alt="usecaseimgone"
-									width={55}
-								/>
-							)}
+							<Image
+								src={
+									itemOpened === "crowd_funding"
+										? CrowdFundingBlack
+										: CrowdFundingYellow
+								}
+								alt="usecaseimgone"
+								height={56}
+								width={56}
+							/>
+
 							<span className="text-inherit text-[16px] font-Montserrat">
 								Crowd Funding
 							</span>

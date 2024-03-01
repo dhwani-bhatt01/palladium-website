@@ -311,8 +311,8 @@ export const ParallaxHeroSection = () => {
 								</h2>
 								<p className="font-medium text-[16px] font-Montserrat">
 									Palladium is operated upon Botanix - a truly decentralized
-									smart contract platform secured by Bitcoin Network - the most
-									secure blockchain in the world.
+									smart contract platform implementing Spiderchain - a Bitcoin
+									Layer-2 with trust-less bridging.
 								</p>
 							</div>
 						) : (
@@ -333,8 +333,8 @@ export const ParallaxHeroSection = () => {
 								</h2>
 								<p className="font-medium text-[16px] font-Montserrat">
 									Palladium is operated upon Botanix - a truly decentralized
-									smart contract platform secured by Bitcoin Network - the most
-									secure blockchain in the world.
+									smart contract platform implementing Spiderchain - a Bitcoin
+									Layer-2 with trust-less bridging.
 								</p>
 								{/* <h2 className="font-semibold text-[24px]">
 									<span className="text-[#F5D64E]">Over-Collateralized</span>

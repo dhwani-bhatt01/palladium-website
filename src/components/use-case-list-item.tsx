@@ -26,7 +26,7 @@ export const UseCaseListItem = (props: Props) => {
 			<Image
 				src={isSelected ? icons.selected : icons.notSelected}
 				alt={label}
-				width={70}
+				width={60}
 			/>
 			<span
 				className={cn(

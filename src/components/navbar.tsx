@@ -7,6 +7,7 @@ import DocsIcon from "@/assets/docs-icon.png";
 import MediumIcon from "@/assets/medium-icon.png";
 import TwitterIcon from "@/assets/twitter-icon.png";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export const Navbar = () => {
@@ -53,9 +54,9 @@ export const Navbar = () => {
 					<div>
 						<Image src={MediumIcon} alt="twitter icon" />
 					</div>
-					<div>
+					<Link target="_blank" href="https://docs.palladiumlabs.org/">
 						<Image src={DocsIcon} alt="twitter icon" />
-					</div>
+					</Link>
 				</div>
 			</div>
 		</nav>

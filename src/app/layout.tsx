@@ -1,4 +1,5 @@
-import glowPng from "@/assets/glow-bg/glow-bg.png";
+// import glowPng from "@/assets/glow-bg/glow-bg.png";
+import glowPng from "@/assets/glow-bg/glow-bg.webp";
 import { cn } from "@/lib/utils";
 import { Metadata } from "next";
 import localFont from "next/font/local";

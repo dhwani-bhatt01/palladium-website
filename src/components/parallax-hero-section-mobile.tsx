@@ -229,7 +229,7 @@ export const ParallaxHeroSectionMobile = () => {
 
 				<motion.h3
 					style={{ y: textY }}
-					className="text-center font-semibold text-[16px] max-w-4xl mt-3"
+					className="text-center font-semibold text-[22px] max-w-4xl mt-3"
 					initial={{ opacity: 0 }}
 					whileInView={{ opacity: 1 }}
 					viewport={{ once: false }}
@@ -239,8 +239,7 @@ export const ParallaxHeroSectionMobile = () => {
 						delay: 0,
 					}}
 				>
-					A censorship-resistant USD-pegeed cryptocurrency that is backed by
-					<br />
+					A censorship-resistant USD-pegeed cryptocurrency that is backed by{" "}
 					<span className="text-[#F5D64E]">
 						security & robustness of Bitcoin.
 					</span>
@@ -299,9 +298,9 @@ export const ParallaxHeroSectionMobile = () => {
 									<span className="text-[#F5D64E]">SECURED</span> BY BITCOIN
 								</h2>
 								<p className="font-medium text-[16px] font-Montserrat">
-									Palladium protocol is operated upon Botanix - a truly
-									decentralized smart contract platform secured by the most
-									robust blockchain in the world.
+									Palladium is operated upon Botanix - a truly decentralized
+									smart contract platform implementing Spiderchain - a Bitcoin
+									Layer-2 with trust-less bridging.
 								</p>
 							</div>
 						) : (
@@ -321,9 +320,9 @@ export const ParallaxHeroSectionMobile = () => {
 									<span className="text-[#F5D64E]">SECURED</span> BY BITCOIN
 								</h2>
 								<p className="font-medium text-[16px] font-Montserrat">
-									Palladium protocol is operated upon Botanix - a truly
-									decentralized smart contract platform secured by the most
-									robust blockchain in the world.
+									Palladium is operated upon Botanix - a truly decentralized
+									smart contract platform implementing Spiderchain - a Bitcoin
+									Layer-2 with trust-less bridging.
 								</p>
 							</div>
 
