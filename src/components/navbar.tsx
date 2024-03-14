@@ -45,15 +45,15 @@ export const Navbar = () => {
 			</div>
 			<div className="flex items-center gap-4 md:gap-8">
 				<div className="flex items-center gap-4 md:gap-8">
-					<div>
+					<Link href=" https://twitter.com/PalladiumLabs" target="_blank">
 						<Image src={TwitterIcon} alt="twitter icon" />
-					</div>
-					<div>
+					</Link>
+					<Link href="https://discord.gg/9MMEyJ4JDz" target="_blank">
 						<Image src={DiscordIcon} alt="twitter icon" />
-					</div>
-					<div>
+					</Link>
+					<Link href="https://medium.com/palladium-labs" target="_blank">
 						<Image src={MediumIcon} alt="twitter icon" />
-					</div>
+					</Link>
 					<Link target="_blank" href="https://docs.palladiumlabs.org/">
 						<Image src={DocsIcon} alt="twitter icon" />
 					</Link>

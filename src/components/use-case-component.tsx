@@ -5,8 +5,9 @@
 // import UseCaseImgThree from "@/assets/Palladium Images/Mask group-1.webp";
 // import UseCaseImgFive from "@/assets/Palladium Images/Mask group-2.webp";
 import UseCaseImgTwo from "@/assets/PalladiumImages/Coin-tree.webp";
-import UseCaseImgThree from "@/assets/PalladiumImages/mask-group-1.webp";
+import UseCaseImgFour from "@/assets/PalladiumImages/mask-group-1.webp";
 import UseCaseImgFive from "@/assets/PalladiumImages/mask-group-2.webp";
+import UseCaseImgThree from "@/assets/margin-trading-desktop.png";
 // import UseCaseImgOne from "@/assets/Palladium Images/Network States.webp";
 import UseCaseImgOne from "@/assets/PalladiumImages/NetworkStates.webp";
 // import UseCaseImgOne from "@/assets/Palladium Images/Network States.webp";
@@ -22,7 +23,7 @@ import MarginTradingBlack from "@/assets/icons/icon-four-black.svg";
 import YieldFarmingBlack from "@/assets/icons/icon-three-black.svg";
 import CurrencyForNetworkStatesBlack from "@/assets/icons/icon-two-black.svg";
 // import UseCaseImgFive from "@/assets/use-case-img-five-with-shadow.png";
-import UseCaseImgFour from "@/assets/use-case-img-four-with-shadow.png";
+// import UseCaseImgFour from "@/assets/use-case-img-four-with-shadow.png";
 // import UseCaseImgThree from "@/assets/use-case-img-three-with-shadow.png";
 // import UseCaseImgTwo from "@/assets/use-case-img-two-with-shadow.png";
 import { useState } from "react";
@@ -113,9 +114,10 @@ export const UseCaseComponent = () => {
 									Currency for Network States
 								</h2>
 								<p className="text-[16px] font-medium font-Montserrat">
-									Palladium employs an algorithmic monetary policy. There is no
-									governance, DAO, or admin keys to ensure protocol can never be
-									censored or manipulated.
+									As digital communities expand into physical spaces, they
+									require RWAs and pay vendors. PUSD, minted with BTC,
+									guarantees uncensored funds, making it an optimal stablecoin
+									choice.
 								</p>
 							</div>
 						</div>
@@ -135,9 +137,10 @@ export const UseCaseComponent = () => {
 							<div className="flex flex-col w-2/3 pl-12">
 								<h2 className="text-[32px] font-semibold">Preserving Wealth</h2>
 								<p className="text-[16px] font-medium font-Montserrat">
-									Palladium employs an algorithmic monetary policy. There is no
-									governance, DAO, or admin keys to ensure protocol can never be
-									censored or manipulated.
+									In the midst of BTC and BRC-20 asset volatility, PUSD emerges
+									as a sanctuary. It empowers investors to secure profits in
+									stablecoin, safeguarding their wealth amidst market
+									turbulence.
 								</p>
 							</div>
 						</div>
@@ -157,9 +160,10 @@ export const UseCaseComponent = () => {
 							<div className="flex flex-col w-2/3 pl-12">
 								<h2 className="text-[32px] font-semibold">Margin Trading</h2>
 								<p className="text-[16px] font-medium font-Montserrat">
-									Palladium employs an algorithmic monetary policy. There is no
-									governance, DAO, or admin keys to ensure protocol can never be
-									censored or manipulated.
+									Maximize your wealth through margin trading while maintaining
+									your Bitcoin portfolio. Access liquidity against your BTC and
+									utilize PUSD across wide range of perps on the BitcoinFi
+									ecosystem.
 								</p>
 							</div>
 						</div>
@@ -179,9 +183,10 @@ export const UseCaseComponent = () => {
 							<div className="flex flex-col w-2/3 pl-12">
 								<h2 className="text-[32px] font-semibold">Yield Farming</h2>
 								<p className="text-[16px] font-medium font-Montserrat">
-									Palladium employs an algorithmic monetary policy. There is no
-									governance, DAO, or admin keys to ensure protocol can never be
-									censored or manipulated.
+									BitcoinFi introduces a groundbreaking opportunity for BTC
+									holders to farm diverse projects within the ecosystem. With
+									PUSD, you can participate in yield farming without risking
+									your BTC holdings.
 								</p>
 							</div>
 						</div>
@@ -201,9 +206,9 @@ export const UseCaseComponent = () => {
 							<div className="flex flex-col w-2/3 pl-12">
 								<h2 className="text-[32px] font-semibold">Crowd Funding</h2>
 								<p className="text-[16px] font-medium font-Montserrat">
-									Palladium employs an algorithmic monetary policy. There is no
-									governance, DAO, or admin keys to ensure protocol can never be
-									censored or manipulated.
+									Organize unstoppable crowdfunding campaigns with PUSD. Provide
+									transparency through a self-audit trail of funds while
+									allowing investors to participate in the campaign anonymously.
 								</p>
 							</div>
 						</div>

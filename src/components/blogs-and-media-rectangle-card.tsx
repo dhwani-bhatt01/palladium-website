@@ -6,10 +6,11 @@ type Props = {
 	image: StaticImageData;
 	// description?: string;
 	videoLink?: string;
+	url?: string;
 };
 
 export const BlogsAndMediaRectangleCard = (props: Props) => {
-	const { image, videoLink } = props;
+	const { image, videoLink, url } = props;
 	const [isModalOpen, setIsModalOpen] = useState(false);
 
 	const openModal = () => {
@@ -28,7 +29,8 @@ export const BlogsAndMediaRectangleCard = (props: Props) => {
 				alt="image"
 				width={382}
 				height={300}
-				onClick={videoLink ? openModal : undefined}
+				// onClick={videoLink ? openModal : undefined}
+				onClick={videoLink ? openModal : () => window.open(url, "_blank")}
 			/>
 			{videoLink && isModalOpen && (
 				<MediaModal

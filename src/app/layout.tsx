@@ -1,5 +1,6 @@
 // import glowPng from "@/assets/glow-bg/glow-bg.png";
 import glowPng from "@/assets/glow-bg/glow-bg.webp";
+import { Toaster } from "@/components/ui/toaster";
 import { cn } from "@/lib/utils";
 import { Metadata } from "next";
 import localFont from "next/font/local";
@@ -102,6 +103,9 @@ export default function RootLayout({
 				/>
 
 				<div className="z-10 relative">{children}</div>
+				<div className="dark">
+					<Toaster />
+				</div>
 			</body>
 		</html>
 	);

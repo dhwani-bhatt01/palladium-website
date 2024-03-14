@@ -87,10 +87,10 @@ export const UseCaseMobileComponentV2 = () => {
 							<h2 className="text-[20px] leading-7 font-semibold">
 								Currency for Network States
 							</h2>
-							<p className="text-[12px] leading-4 font-medium font-Montserrat">
-								Palladium employs an algorithmic monetary policy. There is no
-								governance, DAO, or admin keys to ensure protocol can never be
-								censored or manipulated.
+							<p className="text-[16px] font-medium">
+								As digital communities expand into physical spaces, they require
+								RWAs and pay vendors. PUSD, minted with BTC, guarantees
+								uncensored funds, making it an optimal stablecoin choice.
 							</p>
 						</div>
 					</AccordionContent>
@@ -137,9 +137,9 @@ export const UseCaseMobileComponentV2 = () => {
 								Preserving Wealth
 							</h2>
 							<p className="text-[16px] font-medium">
-								Palladium employs an algorithmic monetary policy. There is no
-								governance, DAO, or admin keys to ensure protocol can never be
-								censored or manipulated.
+								In the midst of BTC and BRC-20 asset volatility, PUSD emerges as
+								a sanctuary. It empowers investors to secure profits in
+								stablecoin, safeguarding their wealth amidst market turbulence.
 							</p>
 						</div>
 					</AccordionContent>
@@ -186,9 +186,10 @@ export const UseCaseMobileComponentV2 = () => {
 								Margin Trading
 							</h2>
 							<p className="text-[16px] font-medium">
-								Palladium employs an algorithmic monetary policy. There is no
-								governance, DAO, or admin keys to ensure protocol can never be
-								censored or manipulated.
+								Maximize your wealth through margin trading while maintaining
+								your Bitcoin portfolio. Access liquidity against your BTC and
+								utilize PUSD across wide range of perps on the BitcoinFi
+								ecosystem.
 							</p>
 						</div>
 					</AccordionContent>
@@ -235,9 +236,10 @@ export const UseCaseMobileComponentV2 = () => {
 								Yield Farming
 							</h2>
 							<p className="text-[16px] font-medium">
-								Palladium employs an algorithmic monetary policy. There is no
-								governance, DAO, or admin keys to ensure protocol can never be
-								censored or manipulated.
+								BitcoinFi introduces a groundbreaking opportunity for BTC
+								holders to farm diverse projects within the ecosystem. With
+								PUSD, you can participate in yield farming without risking your
+								BTC holdings.
 							</p>
 						</div>
 					</AccordionContent>
@@ -285,9 +287,9 @@ export const UseCaseMobileComponentV2 = () => {
 								Crowd Funding
 							</h2>
 							<p className="text-[16px] font-medium">
-								Palladium employs an algorithmic monetary policy. There is no
-								governance, DAO, or admin keys to ensure protocol can never be
-								censored or manipulated.
+								Organize unstoppable crowdfunding campaigns with PUSD. Provide
+								transparency through a self-audit trail of funds while allowing
+								investors to participate in the campaign anonymously.
 							</p>
 						</div>
 					</AccordionContent>

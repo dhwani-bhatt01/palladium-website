@@ -48,11 +48,13 @@ export const GetStartedSection = () => {
 					image={ToolIcon}
 					desc="Build Uncensorable Financial Apps"
 					btnTxt="GET STARTED"
+					url="https://docs.palladiumlabs.org/developers/get-started"
 				/>
 				<NotchedCard
 					image={CoinIcon}
 					desc="Palladium Token for Value Accrual"
 					btnTxt="LEARN MORE"
+					url="https://docs.palladiumlabs.org/user-guide-and-faqs/palladium-token"
 				/>
 			</div>
 		</div>

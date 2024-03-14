@@ -6,9 +6,18 @@ type Props = {
 	children: ReactNode;
 	disabled?: boolean;
 	isColoredBackground?: boolean;
+	onClick?: () => void;
+	url?: string;
 };
 export const FancyButton = (props: Props) => {
-	const { children, disabled, isColoredBackground } = props;
+	const { children, disabled, isColoredBackground, onClick, url } = props;
+	const handleClick = () => {
+		if (url) {
+			window.open(url, "_blank");
+		} else if (onClick) {
+			onClick(); // Call onClick handler if provided
+		}
+	};
 
 	return (
 		<button
@@ -17,6 +26,7 @@ export const FancyButton = (props: Props) => {
 				[styles.coloredBg]: isColoredBackground,
 			})}
 			disabled={disabled}
+			onClick={handleClick}
 		>
 			<div className={styles.child}>{children}</div>
 		</button>

@@ -28,7 +28,9 @@ export const HeroSection = () => {
 					<Button className="">GET STARTED</Button>
 				</div> */}
 				<div className="mt-9">
-					<FancyButton isColoredBackground>Get Started</FancyButton>
+					<FancyButton url="https://discord.gg/9MMEyJ4JDz" isColoredBackground>
+						Join Community
+					</FancyButton>
 				</div>
 			</div>
 			{/* <div className="border border-[#F5D64E] p-4 [clip-path:polygon(1rem_0%,_100%_0,_100%_calc(100%_-_1rem),_calc(100%_-_1rem)_100%,_0_100%,_0%_1rem)]">
@@ -45,7 +47,8 @@ export const HeroSection = () => {
 						Strategic partnership with Botanix Labs
 						<Link
 							className="ml-2 text-[10px] md:text-[14px] items-center text-[#F5D64E] flex gap-1"
-							href="#"
+							href="https://akashgaurav.medium.com/7d77ca1c0b5c"
+							target="_blank"
 						>
 							READ MORE <ArrowRight size={16} color="#f5d64e" />
 						</Link>

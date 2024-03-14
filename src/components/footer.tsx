@@ -38,7 +38,8 @@ export const Footer = () => {
 					<div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#F5D64E]"></div>
 					<Link
 						className="flex items-center gap-2 text-[#F5D64E] font-Montserrat"
-						href={"#"}
+						href="https://twitter.com/PalladiumLabs"
+						target="_blank"
 					>
 						<Image src={TwitterIcon} alt="twitter-icon" /> Twitter
 					</Link>
@@ -51,7 +52,8 @@ export const Footer = () => {
 					<div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#F5D64E]"></div>
 					<Link
 						className="flex items-center gap-2 text-[#F5D64E] font-Montserrat"
-						href={"#"}
+						href="https://discord.gg/9MMEyJ4JDz"
+						target="_blank"
 					>
 						<Image src={DiscordIcon} alt="discord-icon" /> Discord
 					</Link>
@@ -64,7 +66,8 @@ export const Footer = () => {
 					<div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#F5D64E]"></div>
 					<Link
 						className="flex items-center gap-2 text-[#F5D64E] font-Montserrat"
-						href={"#"}
+						href="https://medium.com/palladium-labs"
+						target="_blank"
 					>
 						<Image src={MediumIcon} alt="medium-icon" /> Medium
 					</Link>
@@ -77,7 +80,8 @@ export const Footer = () => {
 					<div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#F5D64E]"></div>
 					<Link
 						className="flex items-center gap-2 text-[#F5D64E] font-Montserrat"
-						href={"#"}
+						href="https://docs.palladiumlabs.org/"
+						target="_blank"
 					>
 						<Image src={DocsIcon} alt="docs-icon" /> Docs
 					</Link>
@@ -92,7 +96,8 @@ export const Footer = () => {
 					<div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#F5D64E]"></div>
 					<Link
 						className="flex items-center gap-2 text-[#F5D64E] font-Montserrat"
-						href={"#"}
+						href="https://twitter.com/PalladiumLabs"
+						target="_blank"
 					>
 						<Image src={TwitterIcon} alt="twitter-icon" /> Twitter
 					</Link>
@@ -105,7 +110,8 @@ export const Footer = () => {
 					<div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#F5D64E]"></div>
 					<Link
 						className="flex items-center gap-2 text-[#F5D64E] font-Montserrat"
-						href={"#"}
+						href="https://discord.gg/9MMEyJ4JDz"
+						target="_blank"
 					>
 						<Image src={DiscordIcon} alt="discord-icon" /> Discord
 					</Link>
@@ -118,7 +124,8 @@ export const Footer = () => {
 					<div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#F5D64E]"></div>
 					<Link
 						className="flex items-center gap-2 text-[#F5D64E] font-Montserrat"
-						href={"#"}
+						href="https://medium.com/palladium-labs"
+						target="_blank"
 					>
 						<Image src={MediumIcon} alt="medium-icon" /> Medium
 					</Link>
@@ -140,9 +147,24 @@ export const Footer = () => {
 			</div>
 
 			<div className="flex flex-col justify-center gap-2 text-center mt-4 md:flex-row md:gap-20 md:mt-12 font-Montserrat">
-				<span>Whitepaper</span>
-				<span>Brand Kit</span>
-				<span>Terms of Services</span>
+				<span>
+					<Link href="https://docs.palladiumlabs.org/" target="_blank">
+						Lightpaper
+					</Link>
+				</span>
+				<span>
+					<Link
+						href="https://docs.palladiumlabs.org/information/brand-kit"
+						target="_blank"
+					>
+						Brand Kit
+					</Link>
+				</span>
+				<span>
+					<Link href="/privacy-policy" target="_blank">
+						Privacy Policy
+					</Link>
+				</span>
 			</div>
 			<span className="font-Montserrat text-[12px] text-[#83827d] mt-2">
 				Palladium Protocol Copyright 2024
