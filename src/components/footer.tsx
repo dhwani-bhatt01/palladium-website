@@ -149,7 +149,7 @@ export const Footer = () => {
 			<div className="flex flex-col justify-center gap-2 text-center mt-4 md:flex-row md:gap-20 md:mt-12 font-Montserrat">
 				<span>
 					<Link href="https://docs.palladiumlabs.org/" target="_blank">
-						Lightpaper
+						Litepaper
 					</Link>
 				</span>
 				<span>
