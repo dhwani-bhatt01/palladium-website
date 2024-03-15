@@ -161,7 +161,7 @@ export const Footer = () => {
 					</Link>
 				</span>
 				<span>
-					<a href="https://palladiumlabs.org/privacy-policy" target="_blank">
+					<a href="/privacy-policy" target="_blank">
 						Privacy Policy
 					</a>
 				</span>
