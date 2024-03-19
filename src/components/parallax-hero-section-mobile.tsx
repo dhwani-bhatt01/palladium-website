@@ -227,7 +227,7 @@ export const ParallaxHeroSectionMobile = () => {
 						delay: 0,
 					}}
 				>
-					A censorship-resistant USD-pegeed cryptocurrency that is backed by{" "}
+					A censorship-resistant USD-pegged cryptocurrency that is backed by{" "}
 					<span className="text-[#F5D64E]">
 						security & robustness of Bitcoin.
 					</span>

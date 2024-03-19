@@ -1,14 +1,49 @@
+import PlayBtn from "@/assets/play-button.svg";
 import SpiderIcon from "@/assets/spider-icon.png";
 import SpiderMobileIcon from "@/assets/spider-mobile-image.png";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import { BorderButton } from "./border-button";
 import { CroppedBorderContainer } from "./cropped-border-container";
-import { FancyButton } from "./fancy-button";
+import { MediaModal } from "./media-modal";
 
-export const HeroSection = () => {
+type Props = {
+	// image: StaticImageData;
+	// description?: string;
+	videoLink?: string;
+	// url?: string;
+};
+
+export const HeroSection = (props: Props) => {
+	const { videoLink } = props;
+	const [isModalOpen, setIsModalOpen] = useState(false);
+
+	const openModal = () => {
+		setIsModalOpen(true);
+	};
+
+	const closeModal = () => {
+		setIsModalOpen(false);
+	};
+
+	// useEffect(() => {
+	// 	if (isModalOpen) {
+	// 		// Load YouTube iframe API script when component mounts
+	// 		const script = document.createElement("script");
+	// 		script.src = "https://www.youtube.com/iframe_api";
+	// 		document.body.appendChild(script);
+
+	// 		// Clean up function
+	// 		return () => {
+	// 			document.body.removeChild(script);
+	// 		};
+	// 	}
+	// }, [isModalOpen]);
+
 	return (
-		<div className="flex flex-col items-center justify-center text-center h-[500px] md:h-[650px] gap-24">
+		<div className="flex flex-col items-center justify-center text-center h-[650px] gap-24">
 			<div className="flex flex-col items-center gap-2">
 				<span className="font-bold text-[42px] md:text-[62px] leading-none">
 					WORLD&apos;S MOST RELIABLE
@@ -27,10 +62,30 @@ export const HeroSection = () => {
 					<div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#F5D64E]"></div>
 					<Button className="">GET STARTED</Button>
 				</div> */}
-				<div className="mt-9">
-					<FancyButton url="https://discord.gg/9MMEyJ4JDz" isColoredBackground>
-						Join Community
-					</FancyButton>
+				<div className="mt-9 flex flex-col md:flex-row gap-5">
+					{/* <FancyButton isColoredBackground>Join Community</FancyButton> */}
+					{/* <FancyButton isTransparent onClick={openModal}>
+						<div className="flex items-center gap-2">
+							<Image src={PlayBtn} alt="play-btn" width={40} />
+							<span className="text-[#F5D64E]">WATCH VIDEO</span>
+						</div>
+					</FancyButton> */}
+					<MediaModal
+						videoSrc={videoLink ?? ""}
+						isOpen={isModalOpen}
+						onClose={closeModal}
+					/>
+					<BorderButton url="https://discord.com/invite/9MMEyJ4JDz">
+						<div className="py-1 px-4 text-black bg-[#F5D64E]">
+							JOIN COMMUNITY
+						</div>
+					</BorderButton>
+					<BorderButton onClick={openModal}>
+						<div className="flex items-center gap-2">
+							<Image src={PlayBtn} alt="play-btn" width={40} />
+							<span className="text-[#F5D64E]">WATCH VIDEO</span>
+						</div>
+					</BorderButton>
 				</div>
 			</div>
 			{/* <div className="border border-[#F5D64E] p-4 [clip-path:polygon(1rem_0%,_100%_0,_100%_calc(100%_-_1rem),_calc(100%_-_1rem)_100%,_0_100%,_0%_1rem)]">

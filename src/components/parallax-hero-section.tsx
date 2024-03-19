@@ -238,7 +238,7 @@ export const ParallaxHeroSection = () => {
 						delay: 0,
 					}}
 				>
-					A censorship-resistant USD-pegeed cryptocurrency that is backed by
+					A censorship-resistant USD-pegged cryptocurrency that is backed by
 					<br />
 					<span className="text-[#F5D64E]">
 						security & robustness of Bitcoin.
@@ -357,7 +357,7 @@ export const ParallaxHeroSection = () => {
 								transition={{
 									type: "spring",
 									duration: 1,
-									delay: 1,
+									delay: 0.5,
 								}}
 							>
 								<h2 className="font-semibold text-[24px]">
@@ -392,7 +392,7 @@ export const ParallaxHeroSection = () => {
 								transition={{
 									type: "spring",
 									duration: 1,
-									delay: 2,
+									delay: 1,
 								}}
 							>
 								<h2 className="font-semibold text-[24px]">

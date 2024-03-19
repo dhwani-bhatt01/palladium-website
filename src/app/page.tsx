@@ -20,7 +20,7 @@ export default function Home() {
 			<div>
 				<Navbar />
 				{/* Hero Section */}
-				<HeroSection />
+				<HeroSection videoLink="https://www.youtube.com/embed/hlR42r_b6VI?si=gkH3r8doDSs2KWpi" />
 
 				{isWide ? <ParallaxHeroSection /> : <ParallaxHeroSectionMobile />}
 

@@ -1,0 +1,98 @@
+$button_min_height: 30;
+$button_min_width: 150;
+$button_border_size: 15;
+// $button_font_size: 20;
+$button_padding: 12px 12px;
+$button_text_color: #F5D64E;
+$button_border_color: #F5D64E;
+$button_hover_text_color: #F5D64E;
+$button_hover_border_color: #F5D64E;
+$button_line_height: $button_min_height;
+
+.button,
+.button .span {
+  &:before,
+  &:after {
+    display: block;
+    content: "";
+    width: #{$button_border_size}px;
+    height: #{$button_border_size}px;
+    position: absolute;
+  }
+}
+
+.button {
+  display: inline-block;
+  // font-family: 'Roboto', sans-serif;
+  // font-size: #{$button_font_size}px;
+  position: relative;
+  min-width: #{$button_min_width}px;
+  min-height: #{$button_min_height}px;
+  // margin: 20px;
+  background: none;
+  border: none;
+  text-decoration:none;
+  cursor: pointer;
+  color: $button_text_color;
+  padding: #{$button_padding};
+  box-sizing: content-box;
+  border: 2px solid transparent;
+  text-align: center;
+  line-height: #{$button_line_height}px;
+  transition: 0.5s color;
+  &:before {
+    top: -2px;
+    left: -2px;
+    border-top: 2px solid $button_border_color;
+    border-left: 2px solid $button_border_color;
+    transition: 0.5s all;
+  }
+  &:after {
+    top: -2px;
+    right: -2px;
+    border-top: 2px solid $button_border_color;
+    border-right: 2px solid $button_border_color;
+    transition: 0.5s all;
+  }
+  .span {
+    display: block;
+    color: inherit;
+    &:before {
+      bottom: -2px;
+      left: -2px;
+      border-bottom: 2px solid $button_border_color;
+      border-left: 2px solid $button_border_color;
+      transition: 0.5s all;
+    }
+    &:after {
+      bottom: -2px;
+      right: -2px;
+      border-bottom: 2px solid $button_border_color;
+      border-right: 2px solid $button_border_color;
+      transition: 0.5s all;
+    }
+  }
+  &:hover {
+    color: $button_hover_text_color;
+    &:before,
+    &:after {
+      border-color: $button_hover_border_color;
+      width: 100%;
+      height: 100%;
+    }
+    .span {
+      &:before,
+      &:after {
+        border-color: $button_hover_border_color;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.button:hover .span::before,
+.button:hover .span::after {
+  width: 100%;
+  height: 100%;
+}

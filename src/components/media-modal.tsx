@@ -38,7 +38,12 @@ export const MediaModal = (props: Props) => {
 					{/* <DialogTitle>{title}</DialogTitle> */}
 					{isOpen && (
 						<DialogDescription>
-							<iframe width="100%" height="315px" src={videoSrc} />
+							<iframe
+								width="100%"
+								height="315px"
+								src={videoSrc}
+								allowFullScreen
+							/>
 						</DialogDescription>
 					)}
 				</DialogHeader>

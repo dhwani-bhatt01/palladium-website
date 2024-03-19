@@ -63,3 +63,9 @@
 .coloredBg::before {
 	background: #19170f;
 }
+
+.transparent .child {
+	background: transparent;
+	/* background: #1b1a10; */
+	color: #f5d64e;
+}

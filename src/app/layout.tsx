@@ -82,6 +82,16 @@ export default function RootLayout({
 		<html lang="en">
 			<head>
 				<link rel="icon" href="/favicon.webp" />
+				<script
+					async
+					src="https://www.googletagmanager.com/gtag/js?id=G-KKB89V3090"
+				></script>
+				<script>
+					{`window.dataLayer = window.dataLayer || [];
+  				function gtag(){dataLayer.push(arguments);}
+  				gtag('js', new Date());
+  				gtag('config', 'G-KKB89V3090');`}
+				</script>
 			</head>
 
 			<body

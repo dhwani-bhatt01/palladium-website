@@ -161,9 +161,9 @@ export const Footer = () => {
 					</Link>
 				</span>
 				<span>
-					<Link href="/privacy-policy" target="_blank">
+					<a href="/privacy-policy.pdf" target="_blank">
 						Privacy Policy
-					</Link>
+					</a>
 				</span>
 			</div>
 			<span className="font-Montserrat text-[12px] text-[#83827d] mt-2">

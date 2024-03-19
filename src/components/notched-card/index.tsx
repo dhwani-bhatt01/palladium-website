@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import Image, { StaticImageData } from "next/image";
-import { FancyButton } from "../fancy-button";
+import { BorderButton } from "../border-button";
 import styles from "./styles.module.css";
 
 type Props = {
@@ -30,13 +30,16 @@ export const NotchedCard = (props: Props) => {
 			<Image src={image} alt={image.src} className="h-32 w-auto" />
 			<h3 className="text-center font-Montserrat">{desc}</h3>
 			<div>
-				<FancyButton
+				{/* <FancyButton
 					onClick={handleButtonClick}
 					isColoredBackground
 					disabled={comingSoon}
 				>
 					{btnTxt}
-				</FancyButton>
+				</FancyButton> */}
+				<BorderButton onClick={handleButtonClick} disabled={comingSoon}>
+					<div className="py-1 px-4 text-black bg-[#F5D64E]">{btnTxt}</div>
+				</BorderButton>
 				{comingSoon ? (
 					<div className="text-center text-[12px] text-[#F5D64E] mt-2">
 						Coming Soon

@@ -6,11 +6,19 @@ type Props = {
 	children: ReactNode;
 	disabled?: boolean;
 	isColoredBackground?: boolean;
+	isTransparent?: boolean;
 	onClick?: () => void;
 	url?: string;
 };
 export const FancyButton = (props: Props) => {
-	const { children, disabled, isColoredBackground, onClick, url } = props;
+	const {
+		children,
+		disabled,
+		isColoredBackground,
+		onClick,
+		url,
+		isTransparent,
+	} = props;
 	const handleClick = () => {
 		if (url) {
 			window.open(url, "_blank");
@@ -24,6 +32,7 @@ export const FancyButton = (props: Props) => {
 			className={cn(styles.btn, {
 				[styles.disabled]: disabled,
 				[styles.coloredBg]: isColoredBackground,
+				[styles.transparent]: isTransparent,
 			})}
 			disabled={disabled}
 			onClick={handleClick}
