@@ -161,7 +161,7 @@ export const Footer = () => {
 					</Link>
 				</span>
 				<span>
-					<Link href="/#/privacy-policy" target="_blank">
+					<Link href="/privacy-policy" target="_blank">
 						Privacy Policy
 					</Link>
 				</span>
