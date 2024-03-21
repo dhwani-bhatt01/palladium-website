@@ -7,6 +7,9 @@
 import CardImgSix from "@/assets/Thumbnails/botanix-labs.webp";
 import CardImgFive from "@/assets/Thumbnails/palladium-protocol.webp";
 import CardImgThree from "@/assets/Thumbnails/trust-trustless-system.webp";
+import NewCardImg1 from "@/assets/blogs-and-media-card-images/card-image-new-1.png";
+import NewCardImg2 from "@/assets/blogs-and-media-card-images/card-image-new-2.png";
+import NewCardImg3 from "@/assets/blogs-and-media-card-images/card-image-new-three.png";
 import { StaticImageData } from "next/image";
 import { BlogsAndMediaRectangleCard } from "./blogs-and-media-rectangle-card";
 
@@ -20,28 +23,12 @@ type BlogAndMediaCardPayload = {
 
 export const BlogsAndMediaSection = () => {
 	const blogsAndMediaData: BlogAndMediaCardPayload[] = [
-		// {
-		// 	id: 1,
-		// 	image: CardImgOne,
-		// 	videoLink:
-		// 		"https://www.youtube.com/embed/wCYUPY9iESM?si=rkxyUXG6AEVsXyM6",
-		// },
-		// {
-		// 	id: 2,
-		// 	image: CardImgTwo,
-		// 	videoLink:
-		// 		"https://www.youtube.com/embed/BtTJmb0jYzE?si=vjt2RtGGxWgU4PqO",
-		// },
 		{
 			id: 1,
 			image: CardImgThree,
 			videoLink:
 				"https://www.youtube.com/embed/wCYUPY9iESM?si=6ZqFECxkZpIO1H0F",
 		},
-		// {
-		// 	id: 4,
-		// 	image: CardImgFour,
-		// },
 		{
 			id: 2,
 			image: CardImgFive,
@@ -53,6 +40,22 @@ export const BlogsAndMediaSection = () => {
 			image: CardImgSix,
 			url: "https://akashgaurav.medium.com/7d77ca1c0b5c",
 			// description: "How to trust a trustless system?",
+		},
+		{
+			id: 4,
+			image: NewCardImg1,
+			videoLink:
+				"https://www.youtube.com/embed/hlR42r_b6VI?si=gkH3r8doDSs2KWpi",
+		},
+		{
+			id: 5,
+			image: NewCardImg2,
+			url: "https://www.nasdaq.com/articles/palladium-and-botanix-labs-launches-bitcoin-native-stablecoin-on-bitcoins-first-evm-layer",
+		},
+		{
+			id: 6,
+			image: NewCardImg3,
+			url: "https://bitcoinmagazine.com/business/palladium-and-botanix-labs-launches-bitcoin-native-stablecoin-on-bitcoins-first-evm-layer-2",
 		},
 	];
 
