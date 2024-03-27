@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { Metadata } from "next";
 import localFont from "next/font/local";
 import Image from "next/image";
+import Script from "next/script";
 import "./globals.css";
 
 // const inter = Inter({ subsets: ["latin"] });
@@ -82,16 +83,16 @@ export default function RootLayout({
 		<html lang="en">
 			<head>
 				<link rel="icon" href="/favicon.webp" />
-				<script
+				<Script type="text/javascript" id="gtm-script">
+					{`window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KKB89V3090');`}
+				</Script>
+				<Script
 					async
 					src="https://www.googletagmanager.com/gtag/js?id=G-KKB89V3090"
-				></script>
-				<script>
-					{`window.dataLayer = window.dataLayer || [];
-  				function gtag(){dataLayer.push(arguments);}
-  				gtag('js', new Date());
-  				gtag('config', 'G-KKB89V3090');`}
-				</script>
+				></Script>
 			</head>
 
 			<body
